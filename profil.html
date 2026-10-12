@@ -1,0 +1,1175 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profil // Pais NNCLHNT</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --black: #050505;
+    --black-soft: #0b0b0b;
+    --card: rgba(14, 14, 14, 0.88);
+
+    --gold: #d4af37;
+    --gold-light: #f4d675;
+    --gold-bright: #ffe89a;
+    --gold-dark: #9e7a1e;
+
+    --white: #f8f5e8;
+    --gray: #aaa58f;
+
+    --line: rgba(212,175,55,.20);
+    --gold-glow: rgba(212,175,55,.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+    color: var(--white);
+
+    background:
+        radial-gradient(circle at 15% 15%, rgba(212,175,55,.12), transparent 28%),
+        radial-gradient(circle at 85% 85%, rgba(212,175,55,.09), transparent 30%),
+        linear-gradient(135deg, #020202, #0a0a0a 50%, #020202);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 18px;
+
+    overflow-x: hidden;
+}
+
+/* =====================================
+   AMBIENT LIGHT
+===================================== */
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    filter: blur(80px);
+
+    opacity: .15;
+
+    background: var(--gold);
+
+    animation: ambientMove 9s ease-in-out infinite alternate;
+}
+
+body::before {
+    top: -180px;
+    left: -150px;
+}
+
+body::after {
+    right: -160px;
+    bottom: -180px;
+
+    animation-delay: -4s;
+}
+
+@keyframes ambientMove {
+    0% {
+        transform: translate(0,0) scale(1);
+        opacity: .10;
+    }
+
+    50% {
+        transform: translate(50px,30px) scale(1.15);
+        opacity: .18;
+    }
+
+    100% {
+        transform: translate(-20px,60px) scale(.95);
+        opacity: .10;
+    }
+}
+
+/* =====================================
+   MAIN CONTAINER
+===================================== */
+
+.container {
+    position: relative;
+
+    width: 100%;
+    max-width: 950px;
+
+    padding: 48px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22,22,22,.95),
+            rgba(7,7,7,.96)
+        );
+
+    border: 1px solid rgba(212,175,55,.22);
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,.75),
+        0 0 45px rgba(212,175,55,.07),
+        inset 0 0 40px rgba(212,175,55,.025);
+
+    animation: containerAppear 1s cubic-bezier(.2,.8,.2,1);
+}
+
+@keyframes containerAppear {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =====================================
+   GOLD TOP LINE
+===================================== */
+
+.container::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 280px;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold-dark),
+            var(--gold-light),
+            var(--gold-dark),
+            transparent
+        );
+
+    box-shadow:
+        0 0 12px var(--gold),
+        0 0 30px rgba(212,175,55,.5);
+
+    animation: topLine 3s ease-in-out infinite;
+}
+
+@keyframes topLine {
+    0%,100% {
+        width: 180px;
+        opacity: .55;
+    }
+
+    50% {
+        width: 330px;
+        opacity: 1;
+    }
+}
+
+/* =====================================
+   DECORATION
+===================================== */
+
+.container::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    right: -150px;
+    top: -150px;
+
+    border-radius: 50%;
+
+    background: rgba(212,175,55,.06);
+
+    filter: blur(3px);
+
+    pointer-events: none;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header-section {
+    position: relative;
+
+    text-align: center;
+
+    padding-bottom: 34px;
+    margin-bottom: 38px;
+
+    border-bottom: 1px solid var(--line);
+}
+
+/* =====================================
+   PROFILE IMAGE
+===================================== */
+
+.profile-wrapper {
+    position: relative;
+
+    width: 150px;
+    height: 150px;
+
+    margin: 0 auto 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ring */
+
+.profile-wrapper::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -8px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(212,175,55,.35);
+    border-top-color: var(--gold-light);
+
+    box-shadow:
+        0 0 20px rgba(212,175,55,.12);
+
+    animation: rotateRing 8s linear infinite;
+}
+
+.profile-wrapper::after {
+    content: "✦";
+
+    position: absolute;
+
+    top: -18px;
+    right: 12px;
+
+    color: var(--gold-light);
+
+    font-size: 14px;
+
+    text-shadow:
+        0 0 12px var(--gold);
+
+    animation: starPulse 2s ease-in-out infinite;
+}
+
+@keyframes rotateRing {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes starPulse {
+    0%,100% {
+        transform: scale(.8);
+        opacity: .5;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    padding: 5px;
+
+    border: 2px solid var(--gold);
+
+    background: #080808;
+
+    filter: grayscale(100%);
+
+    transition: .6s cubic-bezier(.2,.8,.2,1);
+
+    box-shadow:
+        0 0 0 7px rgba(212,175,55,.04),
+        0 20px 50px rgba(0,0,0,.7);
+}
+
+.profile-img:hover {
+    filter: grayscale(0%);
+
+    transform: scale(1.06);
+
+    border-color: var(--gold-bright);
+
+    box-shadow:
+        0 0 35px rgba(212,175,55,.35),
+        0 20px 55px rgba(0,0,0,.8);
+}
+
+/* =====================================
+   STATUS
+===================================== */
+
+.status-badge {
+    position: absolute;
+
+    right: 0;
+    bottom: 5px;
+
+    padding: 6px 12px;
+
+    border-radius: 30px;
+
+    color: var(--gold-light);
+
+    background: #090909;
+
+    border: 1px solid rgba(212,175,55,.55);
+
+    font-family: 'Fira Code', monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.7),
+        0 0 12px rgba(212,175,55,.08);
+
+    animation: statusGlow 2.5s ease-in-out infinite;
+}
+
+.status-badge::before {
+    content: "●";
+
+    margin-right: 5px;
+
+    color: var(--gold-light);
+
+    text-shadow:
+        0 0 8px var(--gold);
+}
+
+@keyframes statusGlow {
+    0%,100% {
+        box-shadow:
+            0 5px 20px rgba(0,0,0,.7),
+            0 0 8px rgba(212,175,55,.05);
+    }
+
+    50% {
+        box-shadow:
+            0 5px 20px rgba(0,0,0,.7),
+            0 0 18px rgba(212,175,55,.18);
+    }
+}
+
+/* =====================================
+   NAME
+===================================== */
+
+.header-section h1 {
+    font-family: 'Cinzel', serif;
+
+    color: var(--gold-light);
+
+    font-size: 2rem;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 9px;
+
+    text-shadow:
+        0 0 15px rgba(212,175,55,.15);
+
+    animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+    0%,100% {
+        text-shadow:
+            0 0 12px rgba(212,175,55,.10);
+    }
+
+    50% {
+        text-shadow:
+            0 0 25px rgba(212,175,55,.28);
+    }
+}
+
+.header-desc {
+    color: var(--gray);
+
+    font-size: .76rem;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+/* =====================================
+   TAG
+===================================== */
+
+.tag-container {
+    display: flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin: 21px 0;
+}
+
+.tag {
+    position: relative;
+
+    overflow: hidden;
+
+    color: var(--gold-light);
+
+    font-family: 'Fira Code', monospace;
+
+    font-size: 11px;
+
+    padding: 7px 13px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(212,175,55,.25);
+
+    background: rgba(212,175,55,.045);
+
+    transition: .35s ease;
+}
+
+.tag::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,232,154,.18),
+        transparent
+    );
+
+    transform: skewX(-20deg);
+
+    transition: .6s;
+}
+
+.tag:hover::after {
+    left: 130%;
+}
+
+.tag:hover {
+    color: var(--gold-bright);
+
+    border-color: rgba(212,175,55,.55);
+
+    background: rgba(212,175,55,.08);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,.35),
+        0 0 15px rgba(212,175,55,.08);
+}
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+.nav-menu {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    list-style: none;
+
+    margin-top: 22px;
+}
+
+.nav-menu a {
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 9px 15px;
+
+    border-radius: 30px;
+
+    color: #c8c2ad;
+
+    text-decoration: none;
+
+    font-size: .76rem;
+
+    font-weight: 600;
+
+    border: 1px solid rgba(212,175,55,.08);
+
+    background: rgba(255,255,255,.018);
+
+    transition: .35s ease;
+}
+
+.nav-menu a::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(244,214,117,.15),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: .7s;
+}
+
+.nav-menu a:hover::before {
+    left: 130%;
+}
+
+.nav-menu a span {
+    color: var(--gold);
+
+    font-size: .68rem;
+
+    transition: .3s;
+}
+
+.nav-menu a:hover {
+    color: var(--gold-light);
+
+    border-color: rgba(212,175,55,.38);
+
+    background: rgba(212,175,55,.055);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.35),
+        0 0 14px rgba(212,175,55,.07);
+}
+
+.nav-menu a:hover span {
+    transform: rotate(90deg);
+
+    color: var(--gold-bright);
+}
+
+/* =====================================
+   CONTENT
+===================================== */
+
+.content-section {
+    position: relative;
+
+    max-width: 720px;
+
+    margin: auto;
+
+    animation: contentAppear 1.2s ease .15s both;
+}
+
+@keyframes contentAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+
+    text-align: center;
+
+    color: var(--gold-light);
+
+    font-size: 1.5rem;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 7px;
+
+    text-shadow:
+        0 0 20px rgba(212,175,55,.12);
+}
+
+.subtitle {
+    text-align: center;
+
+    color: #706b5b;
+
+    font-family: 'Fira Code', monospace;
+
+    font-size: .68rem;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 30px;
+}
+
+/* =====================================
+   PROFILE TABLE
+===================================== */
+
+table {
+    width: 100%;
+
+    border-collapse: separate;
+
+    border-spacing: 0 10px;
+}
+
+td {
+    position: relative;
+
+    padding: 15px 19px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025),
+            rgba(212,175,55,.018)
+        );
+
+    border-top: 1px solid rgba(212,175,55,.08);
+
+    border-bottom: 1px solid rgba(212,175,55,.08);
+
+    transition: .4s ease;
+}
+
+tr:hover td {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(212,175,55,.07),
+            rgba(212,175,55,.025)
+        );
+
+    border-color: rgba(212,175,55,.25);
+}
+
+td:first-child {
+    border-left: 1px solid rgba(212,175,55,.08);
+
+    border-radius: 13px 0 0 13px;
+}
+
+td:last-child {
+    border-right: 1px solid rgba(212,175,55,.08);
+
+    border-radius: 0 13px 13px 0;
+}
+
+.label {
+    width: 38%;
+
+    text-align: right;
+
+    color: #827d6d;
+
+    font-size: .8rem;
+
+    font-weight: 600;
+
+    letter-spacing: .5px;
+}
+
+.value {
+    color: #eee9d8;
+
+    font-size: .88rem;
+
+    font-weight: 500;
+
+    transition: .3s;
+}
+
+tr:hover .value {
+    color: var(--gold-light);
+}
+
+/* =====================================
+   BACK BUTTON
+===================================== */
+
+.back-link {
+    text-align: center;
+
+    margin-top: 38px;
+}
+
+.back-link a {
+    position: relative;
+
+    overflow: hidden;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 13px 29px;
+
+    border-radius: 50px;
+
+    color: #090909;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-light),
+            var(--gold),
+            var(--gold-dark)
+        );
+
+    text-decoration: none;
+
+    font-size: .74rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.5),
+        0 0 20px rgba(212,175,55,.12);
+
+    transition: .4s ease;
+}
+
+.back-link a::before {
+    content: "←";
+
+    font-size: 1rem;
+}
+
+.back-link a::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background: rgba(255,255,255,.25);
+
+    transform: skewX(-20deg);
+
+    transition: .7s;
+}
+
+.back-link a:hover::after {
+    left: 130%;
+}
+
+.back-link a:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.6),
+        0 0 30px rgba(212,175,55,.25);
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    text-align: center;
+
+    margin-top: 30px;
+
+    color: #4f4a3e;
+
+    font-family: 'Fira Code', monospace;
+
+    font-size: .63rem;
+
+    letter-spacing: 1.5px;
+}
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 32px 18px;
+
+        border-radius: 23px;
+    }
+
+    .profile-wrapper,
+    .profile-img {
+        width: 125px;
+        height: 125px;
+    }
+
+    .profile-wrapper::before {
+        inset: -7px;
+    }
+
+    .header-section h1 {
+        font-size: 1.4rem;
+
+        letter-spacing: 3px;
+    }
+
+    .header-desc {
+        font-size: .65rem;
+
+        line-height: 1.7;
+
+        letter-spacing: 2px;
+    }
+
+    .nav-menu {
+        gap: 7px;
+    }
+
+    .nav-menu a {
+        font-size: .68rem;
+
+        padding: 8px 10px;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+
+        letter-spacing: 3px;
+    }
+
+    .subtitle {
+        font-size: .6rem;
+
+        letter-spacing: 3px;
+    }
+
+    td {
+        padding: 12px 10px;
+    }
+
+    .label {
+        width: 36%;
+
+        font-size: .68rem;
+    }
+
+    .value {
+        font-size: .75rem;
+    }
+
+    .back-link a {
+        padding: 12px 20px;
+
+        font-size: .65rem;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .container {
+        padding: 28px 14px;
+    }
+
+    .tag {
+        font-size: 9px;
+
+        padding: 6px 10px;
+    }
+
+    .nav-menu a {
+        padding: 7px 8px;
+
+        font-size: .62rem;
+    }
+
+    td {
+        padding: 10px 8px;
+    }
+
+    .label {
+        font-size: .62rem;
+    }
+
+    .value {
+        font-size: .68rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header-section">
+
+        <div class="profile-wrapper">
+
+            <img
+                class="profile-img"
+                src="ya.jfif"
+                alt="Foto Profil Pais NNCLHNT"
+            >
+
+            <div class="status-badge">
+                Active
+            </div>
+
+        </div>
+
+        <h1>PAIS NNCLHNT</h1>
+
+        <div class="header-desc">
+            Personal Profile • Football Lover • Petir
+        </div>
+
+        <!-- TAG -->
+        <div class="tag-container">
+
+            <span class="tag">#faiznnclhnt</span>
+            <span class="tag">#petir</span>
+            <span class="tag">#pencintabola</span>
+
+        </div>
+
+        <!-- NAVIGATION -->
+        <ul class="nav-menu">
+
+            <li>
+                <a href="index.html">
+                    <span>✦</span>
+                    Beranda
+                </a>
+            </li>
+
+            <li>
+                <a href="profil.html">
+                    <span>✦</span>
+                    Profil
+                </a>
+            </li>
+
+            <li>
+                <a href="kegiatan.html">
+                    <span>✦</span>
+                    Kegiatan
+                </a>
+            </li>
+
+            <li>
+                <a href="foto.html">
+                    <span>✦</span>
+                    Foto-foto
+                </a>
+            </li>
+
+            <li>
+                <a href="puisi.html">
+                    <span>✦</span>
+                    Puisi Teman
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- CONTENT -->
+    <div class="content-section">
+
+        <h2>CURRICULUM VITAE</h2>
+
+        <div class="subtitle">
+            PERSONAL INFORMATION
+        </div>
+
+        <table>
+
+            <tr>
+                <td class="label">
+                    Nama
+                </td>
+
+                <td class="value">
+                    Pais nnclhnt
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">
+                    TTL
+                </td>
+
+                <td class="value">
+                    Petir, x Jan 2010
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">
+                    Agama
+                </td>
+
+                <td class="value">
+                    Islam
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">
+                    Gol. Darah
+                </td>
+
+                <td class="value">
+                    X
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">
+                    Pekerjaan
+                </td>
+
+                <td class="value">
+                    Oh iya bang
+                </td>
+            </tr>
+
+            <tr>
+                <td class="label">
+                    Hobi
+                </td>
+
+                <td class="value">
+                    Mainan bola ⚽
+                </td>
+            </tr>
+
+        </table>
+
+
+        <!-- BUTTON -->
+        <div class="back-link">
+
+            <a href="index.html">
+                KEMBALI KE BERANDA
+            </a>
+
+        </div>
+
+        <div class="footer">
+            © 2026 • PAIS NNCLHNT • PERSONAL WEBSITE
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1485 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Foto-foto // Pais NNCLHNT</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   GOLD LUXURY THEME
+===================================================== */
+
+:root {
+
+    --black: #050505;
+    --black-soft: #0b0b0b;
+    --card: rgba(15,15,15,.92);
+
+    --gold: #c59b27;
+    --gold-light: #f1d477;
+    --gold-bright: #ffe9a3;
+    --gold-dark: #806015;
+
+    --gold-glow: rgba(197,155,39,.45);
+
+    --white: #f8fafc;
+    --gray: #a1a1aa;
+    --dark-gray: #555;
+
+    --border: rgba(197,155,39,.25);
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+
+    min-height: 100vh;
+
+    padding: 35px 18px;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+    color: var(--white);
+
+    overflow-x: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(197,155,39,.14),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(197,155,39,.11),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(197,155,39,.035),
+            transparent 50%
+        ),
+
+        linear-gradient(
+            135deg,
+            #030303,
+            #0c0c0c 50%,
+            #030303
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* =====================================================
+   AMBIENT LIGHT
+===================================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    left: -250px;
+    top: -250px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(197,155,39,.12),
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    animation:
+        ambientMove 9s ease-in-out infinite alternate;
+
+    pointer-events: none;
+}
+
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    right: -220px;
+    bottom: -220px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(197,155,39,.10),
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    animation:
+        ambientMove2 11s ease-in-out infinite alternate;
+
+    pointer-events: none;
+}
+
+
+@keyframes ambientMove {
+
+    from {
+        transform: translate(0,0) scale(1);
+    }
+
+    to {
+        transform: translate(150px,100px) scale(1.25);
+    }
+
+}
+
+
+@keyframes ambientMove2 {
+
+    from {
+        transform: translate(0,0) scale(1);
+    }
+
+    to {
+        transform: translate(-120px,-100px) scale(1.3);
+    }
+
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container {
+
+    width: 100%;
+
+    max-width: 950px;
+
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25,25,25,.94),
+            rgba(8,8,8,.96)
+        );
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+
+        0 30px 80px rgba(0,0,0,.75),
+
+        0 0 50px rgba(197,155,39,.06),
+
+        inset 0 0 50px rgba(197,155,39,.025);
+
+    animation:
+        containerEnter 1s ease forwards;
+}
+
+
+@keyframes containerEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   GOLD TOP LINE
+===================================================== */
+
+.container::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 260px;
+
+    height: 3px;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold-dark),
+            var(--gold-bright),
+            var(--gold),
+            transparent
+        );
+
+    box-shadow:
+
+        0 0 10px var(--gold-glow),
+        0 0 25px var(--gold-glow);
+
+    animation:
+        goldLine 3s ease-in-out infinite;
+}
+
+
+@keyframes goldLine {
+
+    0%,100% {
+        opacity: .5;
+        width: 180px;
+    }
+
+    50% {
+        opacity: 1;
+        width: 330px;
+    }
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header-section {
+
+    text-align: center;
+
+    padding-bottom: 28px;
+
+    margin-bottom: 30px;
+
+    border-bottom:
+        1px solid
+        rgba(197,155,39,.18);
+
+    position: relative;
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile-wrapper {
+
+    position: relative;
+
+    width: 130px;
+    height: 130px;
+
+    margin:
+        0 auto 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* rotating ring */
+
+.profile-wrapper::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid transparent;
+
+    border-top-color:
+        var(--gold-light);
+
+    border-right-color:
+        var(--gold);
+
+    box-shadow:
+        0 0 18px rgba(197,155,39,.25);
+
+    animation:
+        rotateRing 5s linear infinite;
+}
+
+
+@keyframes rotateRing {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+.profile-img {
+
+    width: 112px;
+    height: 112px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border:
+        2px solid var(--gold);
+
+    padding: 3px;
+
+    background: #050505;
+
+    filter:
+        grayscale(100%)
+        contrast(110%);
+
+    transition:
+        .5s ease;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+
+        0 0 0 5px rgba(197,155,39,.04),
+
+        0 10px 35px rgba(0,0,0,.7);
+}
+
+
+.profile-img:hover {
+
+    filter: grayscale(0%);
+
+    transform:
+        scale(1.08);
+
+    border-color:
+        var(--gold-bright);
+
+    box-shadow:
+
+        0 0 20px rgba(197,155,39,.5),
+
+        0 0 50px rgba(197,155,39,.18);
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status-badge {
+
+    position: absolute;
+
+    right: 0;
+    bottom: 3px;
+
+    z-index: 5;
+
+    padding:
+        4px 9px;
+
+    color:
+        var(--gold-bright);
+
+    background:
+        #080808;
+
+    border:
+        1px solid
+        var(--gold);
+
+    border-radius:
+        20px;
+
+    font-family:
+        'Fira Code',
+        monospace;
+
+    font-size:
+        9px;
+
+    box-shadow:
+        0 0 12px rgba(197,155,39,.2);
+}
+
+
+.status-badge::before {
+
+    content: "●";
+
+    margin-right: 5px;
+
+    color:
+        var(--gold-light);
+
+    animation:
+        statusPulse 1.5s infinite;
+}
+
+
+@keyframes statusPulse {
+
+    50% {
+        opacity: .35;
+    }
+
+}
+
+
+/* =====================================================
+   TAGS
+===================================================== */
+
+.tag-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 12px;
+}
+
+
+.tag {
+
+    padding:
+        6px 12px;
+
+    color:
+        var(--gold-light);
+
+    background:
+        rgba(197,155,39,.045);
+
+    border:
+        1px solid
+        rgba(197,155,39,.22);
+
+    border-radius:
+        20px;
+
+    font-family:
+        'Fira Code',
+        monospace;
+
+    font-size:
+        10px;
+
+    transition:
+        .35s ease;
+}
+
+
+.tag:hover {
+
+    color:
+        #fff;
+
+    border-color:
+        var(--gold);
+
+    background:
+        rgba(197,155,39,.12);
+
+    box-shadow:
+        0 0 15px rgba(197,155,39,.15);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav-menu {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    list-style: none;
+
+    margin-top: 22px;
+}
+
+
+.nav-menu a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding:
+        9px 15px;
+
+    color:
+        #b8b8b8;
+
+    background:
+        rgba(255,255,255,.018);
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    border-radius:
+        30px;
+
+    text-decoration:
+        none;
+
+    font-size:
+        .76rem;
+
+    font-weight:
+        600;
+
+    transition:
+        .35s ease;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+}
+
+
+.nav-menu a::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -100%;
+
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(197,155,39,.12),
+            transparent
+        );
+
+    transition:
+        .5s;
+}
+
+
+.nav-menu a:hover::before {
+    left: 100%;
+}
+
+
+.nav-menu a span {
+
+    color:
+        var(--gold);
+
+    transition:
+        .3s;
+}
+
+
+.nav-menu a:hover {
+
+    color:
+        var(--gold-bright);
+
+    border-color:
+        rgba(197,155,39,.45);
+
+    background:
+        rgba(197,155,39,.07);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.4),
+
+        0 0 15px rgba(197,155,39,.08);
+}
+
+
+.nav-menu a:hover span {
+
+    text-shadow:
+        0 0 10px var(--gold);
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+h2 {
+
+    text-align: center;
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        'Cinzel',
+        serif;
+
+    font-size:
+        1.55rem;
+
+    letter-spacing:
+        4px;
+
+    margin-bottom:
+        8px;
+
+    text-shadow:
+        0 0 20px rgba(197,155,39,.16);
+}
+
+
+.subtitle {
+
+    text-align: center;
+
+    color:
+        #666;
+
+    font-family:
+        'Fira Code',
+        monospace;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        4px;
+
+    margin-bottom:
+        30px;
+}
+
+
+/* =====================================================
+   PHOTO GRID
+===================================================== */
+
+.photo-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:
+        20px;
+
+    max-width:
+        850px;
+
+    margin:
+        auto;
+}
+
+
+/* =====================================================
+   PHOTO CARD
+===================================================== */
+
+.photo-card {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #181818,
+            #0c0c0c
+        );
+
+    border:
+        1px solid
+        rgba(197,155,39,.12);
+
+    border-radius:
+        17px;
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.45);
+
+    transition:
+        .5s cubic-bezier(.2,.8,.2,1);
+
+    opacity: 0;
+
+    animation:
+        cardAppear .8s ease forwards;
+}
+
+
+.photo-card:nth-child(1) {
+    animation-delay: .2s;
+}
+
+.photo-card:nth-child(2) {
+    animation-delay: .4s;
+}
+
+.photo-card:nth-child(3) {
+    animation-delay: .6s;
+}
+
+
+@keyframes cardAppear {
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+}
+
+
+/* moving shine */
+
+.photo-card::before {
+
+    content: "";
+
+    position:
+        absolute;
+
+    top:
+        -100%;
+
+    left:
+        -80%;
+
+    width:
+        60%;
+
+    height:
+        300%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,230,150,.08),
+            transparent
+        );
+
+    transform:
+        rotate(25deg);
+
+    transition:
+        .8s;
+
+    z-index:
+        4;
+
+    pointer-events:
+        none;
+}
+
+
+.photo-card:hover::before {
+
+    left:
+        130%;
+}
+
+
+/* GOLD BORDER LIGHT */
+
+.photo-card::after {
+
+    content: "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    border:
+        1px solid transparent;
+
+    border-radius:
+        inherit;
+
+    pointer-events:
+        none;
+
+    transition:
+        .5s;
+
+}
+
+
+.photo-card:hover {
+
+    transform:
+        translateY(-9px)
+        scale(1.015);
+
+    border-color:
+        rgba(197,155,39,.65);
+
+    box-shadow:
+
+        0 20px 45px rgba(0,0,0,.65),
+
+        0 0 25px rgba(197,155,39,.13);
+}
+
+
+.photo-card:hover::after {
+
+    border-color:
+        rgba(197,155,39,.35);
+
+    box-shadow:
+        inset 0 0 25px rgba(197,155,39,.05);
+}
+
+
+/* =====================================================
+   PHOTO BOX
+===================================================== */
+
+.photo-box {
+
+    height:
+        210px;
+
+    overflow:
+        hidden;
+
+    background:
+        #050505;
+
+    position:
+        relative;
+}
+
+
+.photo-box::after {
+
+    content: "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 60%,
+            rgba(0,0,0,.55)
+        );
+
+    pointer-events:
+        none;
+}
+
+
+.photo-box img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    display:
+        block;
+
+    filter:
+        grayscale(55%)
+        brightness(.82);
+
+    transition:
+        1s cubic-bezier(.2,.8,.2,1);
+}
+
+
+.photo-card:hover .photo-box img {
+
+    filter:
+        grayscale(0%)
+        brightness(1);
+
+    transform:
+        scale(1.1);
+}
+
+
+/* =====================================================
+   CAPTION
+===================================================== */
+
+.photo-caption {
+
+    padding:
+        14px 10px;
+
+    text-align:
+        center;
+
+    color:
+        #cfcfcf;
+
+    background:
+        rgba(12,12,12,.96);
+
+    border-top:
+        1px solid
+        rgba(197,155,39,.12);
+
+    font-family:
+        'Fira Code',
+        monospace;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        .5px;
+
+    transition:
+        .3s;
+}
+
+
+.photo-card:hover .photo-caption {
+
+    color:
+        var(--gold-light);
+
+    background:
+        rgba(197,155,39,.045);
+
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+
+    height:
+        1px;
+
+    margin:
+        32px 0 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(197,155,39,.35),
+            transparent
+        );
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back-link {
+
+    text-align:
+        center;
+
+    margin-top:
+        25px;
+}
+
+
+.back-link a {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        12px 24px;
+
+    color:
+        var(--gold-light);
+
+    background:
+        rgba(197,155,39,.055);
+
+    border:
+        1px solid
+        rgba(197,155,39,.3);
+
+    border-radius:
+        50px;
+
+    text-decoration:
+        none;
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1.5px;
+
+    transition:
+        .35s;
+}
+
+
+.back-link a:hover {
+
+    color:
+        #080808;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-bright),
+            var(--gold),
+            var(--gold-dark)
+        );
+
+    border-color:
+        var(--gold-light);
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 10px 30px rgba(197,155,39,.28);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    margin-top:
+        25px;
+
+    padding-top:
+        18px;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.06);
+
+    text-align:
+        center;
+
+    color:
+        #4d4d4d;
+
+    font-family:
+        'Fira Code',
+        monospace;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        1px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:750px) {
+
+    .container {
+        padding: 32px 22px;
+    }
+
+    .photo-grid {
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:480px) {
+
+    body {
+        padding:
+            15px 10px;
+    }
+
+    .container {
+        padding:
+            28px 15px;
+
+        border-radius:
+            22px;
+    }
+
+    h2 {
+        font-size:
+            1.2rem;
+
+        letter-spacing:
+            2px;
+    }
+
+    .subtitle {
+        letter-spacing:
+            2px;
+    }
+
+    .photo-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .photo-box {
+        height:
+            220px;
+    }
+
+    .nav-menu {
+        gap:
+            6px;
+    }
+
+    .nav-menu a {
+        padding:
+            7px 10px;
+
+        font-size:
+            10px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<div class="header-section">
+
+
+    <div class="profile-wrapper">
+
+        <img
+            class="profile-img"
+            src="ya.jfif"
+            alt="Foto Profil"
+        >
+
+        <div class="status-badge">
+            Active
+        </div>
+
+    </div>
+
+
+    <div class="tag-container">
+
+        <span class="tag">
+            #faiznnclhnt
+        </span>
+
+        <span class="tag">
+            #petir
+        </span>
+
+        <span class="tag">
+            #pencintabola
+        </span>
+
+    </div>
+
+
+    <ul class="nav-menu">
+
+        <li>
+            <a href="index.html">
+                <span>✦</span>
+                Beranda
+            </a>
+        </li>
+
+        <li>
+            <a href="profil.html">
+                <span>✦</span>
+                Profil
+            </a>
+        </li>
+
+        <li>
+            <a href="kegiatan.html">
+                <span>✦</span>
+                Kegiatan
+            </a>
+        </li>
+
+        <li>
+            <a href="foto.html">
+                <span>✦</span>
+                Foto-foto
+            </a>
+        </li>
+
+        <li>
+            <a href="puisi.html">
+                <span>✦</span>
+                Puisi Teman
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+
+<!-- =====================================================
+     CONTENT
+===================================================== -->
+
+<div class="content-section">
+
+
+    <h2>
+        GALERI FOTO
+    </h2>
+
+
+    <div class="subtitle">
+        Kumpulan Momen Pilihan
+    </div>
+
+
+    <div class="photo-grid">
+
+
+        <div class="photo-card">
+
+            <div class="photo-box">
+
+                <img
+                    src="ya.jfif"
+                    alt="Foto Profil Utama"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+                #01 - Profil Utama
+            </div>
+
+        </div>
+
+
+        <div class="photo-card">
+
+            <div class="photo-box">
+
+                <img
+                    src="bal.jpg"
+                    alt="Foto Main Bola"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+                #02 - Main Bola
+            </div>
+
+        </div>
+
+
+        <div class="photo-card">
+
+            <div class="photo-box">
+
+                <img
+                    src="petir.jfif"
+                    alt="Foto Suasana Petir"
+                >
+
+            </div>
+
+            <div class="photo-caption">
+                #03 - Suasana Petir
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="divider"></div>
+
+
+    <div class="back-link">
+
+        <a href="index.html">
+            ← KEMBALI KE BERANDA
+        </a>
+
+    </div>
+
+
+    <div class="footer">
+
+        © 2026 • PAIS NNCLHNT • PHOTO GALLERY
+
+    </div>
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

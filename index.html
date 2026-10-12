@@ -1,0 +1,1852 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Faiz NNCLHNT // Beranda</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =====================================================
+   GOLD LUXURY THEME
+===================================================== */
+
+:root {
+
+    --black: #050505;
+    --black-soft: #0b0b0b;
+    --card: rgba(15,15,15,.92);
+
+    --gold: #c59b27;
+    --gold-light: #f1d477;
+    --gold-bright: #ffe9a3;
+    --gold-dark: #806015;
+
+    --gold-glow: rgba(197,155,39,.45);
+
+    --white: #f8fafc;
+    --gray: #a1a1aa;
+    --dark-gray: #555;
+
+    --border: rgba(197,155,39,.25);
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+
+    min-height: 100vh;
+
+    padding: 35px 18px;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+    color: var(--white);
+
+    overflow-x: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(197,155,39,.14),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(197,155,39,.11),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(197,155,39,.035),
+            transparent 50%
+        ),
+
+        linear-gradient(
+            135deg,
+            #030303,
+            #0c0c0c 50%,
+            #030303
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* =====================================================
+   AMBIENT GOLD LIGHT
+===================================================== */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    width: 500px;
+    height: 500px;
+
+    left: -250px;
+    top: -250px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(197,155,39,.12),
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    animation:
+        ambientMove 9s ease-in-out infinite alternate;
+
+    pointer-events: none;
+}
+
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    right: -220px;
+    bottom: -220px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(197,155,39,.10),
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    animation:
+        ambientMove2 11s ease-in-out infinite alternate;
+
+    pointer-events: none;
+}
+
+
+@keyframes ambientMove {
+
+    from {
+        transform: translate(0,0) scale(1);
+    }
+
+    to {
+        transform: translate(150px,100px) scale(1.25);
+    }
+
+}
+
+
+@keyframes ambientMove2 {
+
+    from {
+        transform: translate(0,0) scale(1);
+    }
+
+    to {
+        transform: translate(-120px,-100px) scale(1.3);
+    }
+
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container {
+
+    width: 100%;
+
+    max-width: 950px;
+
+    padding: 45px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(25,25,25,.94),
+            rgba(8,8,8,.96)
+        );
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+
+        0 30px 80px rgba(0,0,0,.75),
+
+        0 0 50px rgba(197,155,39,.06),
+
+        inset 0 0 50px rgba(197,155,39,.025);
+
+    animation:
+        containerEnter 1s ease forwards;
+}
+
+
+@keyframes containerEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   GOLD TOP LINE
+===================================================== */
+
+.container::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 260px;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold-dark),
+            var(--gold-bright),
+            var(--gold),
+            transparent
+        );
+
+    box-shadow:
+
+        0 0 10px var(--gold-glow),
+        0 0 25px var(--gold-glow);
+
+    animation:
+        goldLine 3s ease-in-out infinite;
+}
+
+
+@keyframes goldLine {
+
+    0%,100% {
+        opacity: .5;
+        width: 180px;
+    }
+
+    50% {
+        opacity: 1;
+        width: 330px;
+    }
+
+}
+
+
+/* =====================================================
+   DECORATIVE LIGHT
+===================================================== */
+
+.container::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    right: -140px;
+    top: -140px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(197,155,39,.12),
+            transparent 70%
+        );
+
+    filter: blur(10px);
+
+    animation:
+        decorativeGlow 7s ease-in-out infinite alternate;
+
+    pointer-events: none;
+}
+
+
+@keyframes decorativeGlow {
+
+    from {
+        opacity: .35;
+        transform: scale(.8);
+    }
+
+    to {
+        opacity: .8;
+        transform: scale(1.3);
+    }
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header-section {
+
+    text-align: center;
+
+    padding-bottom: 28px;
+
+    margin-bottom: 32px;
+
+    border-bottom:
+        1px solid
+        rgba(197,155,39,.18);
+
+    position: relative;
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile-wrapper {
+
+    position: relative;
+
+    width: 130px;
+    height: 130px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* GOLD ROTATING RING */
+
+.profile-wrapper::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid transparent;
+
+    border-top-color:
+        var(--gold-light);
+
+    border-right-color:
+        var(--gold);
+
+    box-shadow:
+        0 0 18px rgba(197,155,39,.25);
+
+    animation:
+        rotateRing 5s linear infinite;
+}
+
+
+@keyframes rotateRing {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+.profile-img {
+
+    width: 112px;
+    height: 112px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border:
+        2px solid var(--gold);
+
+    padding: 3px;
+
+    background: #050505;
+
+    filter:
+        grayscale(100%)
+        contrast(110%);
+
+    transition:
+        .5s ease;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+
+        0 0 0 5px rgba(197,155,39,.04),
+
+        0 10px 35px rgba(0,0,0,.7);
+}
+
+
+.profile-img:hover {
+
+    filter:
+        grayscale(0%)
+        brightness(1.05);
+
+    transform:
+        scale(1.08);
+
+    border-color:
+        var(--gold-bright);
+
+    box-shadow:
+
+        0 0 20px rgba(197,155,39,.5),
+
+        0 0 50px rgba(197,155,39,.18);
+}
+
+
+/* =====================================================
+   STATUS
+===================================================== */
+
+.status-badge {
+
+    position: absolute;
+
+    right: 0;
+    bottom: 3px;
+
+    z-index: 5;
+
+    padding:
+        4px 9px;
+
+    color:
+        var(--gold-bright);
+
+    background:
+        #080808;
+
+    border:
+        1px solid
+        var(--gold);
+
+    border-radius:
+        20px;
+
+    font-family:
+        'Fira Code',
+        monospace;
+
+    font-size:
+        9px;
+
+    box-shadow:
+        0 0 12px rgba(197,155,39,.2);
+}
+
+
+.status-badge::before {
+
+    content: "●";
+
+    margin-right: 5px;
+
+    color:
+        var(--gold-light);
+
+    animation:
+        statusPulse 1.5s infinite;
+}
+
+
+@keyframes statusPulse {
+
+    50% {
+        opacity: .3;
+    }
+
+}
+
+
+/* =====================================================
+   SITE NAME
+===================================================== */
+
+.site-name {
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        'Cinzel',
+        serif;
+
+    font-size:
+        2rem;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        4px;
+
+    margin-bottom:
+        7px;
+
+    text-shadow:
+
+        0 0 15px rgba(197,155,39,.12),
+
+        0 0 35px rgba(197,155,39,.08);
+
+    animation:
+        titleGlow 3s ease-in-out infinite alternate;
+}
+
+
+@keyframes titleGlow {
+
+    from {
+        text-shadow:
+            0 0 10px rgba(197,155,39,.08);
+    }
+
+    to {
+        text-shadow:
+            0 0 25px rgba(197,155,39,.25);
+    }
+
+}
+
+
+.site-description {
+
+    color:
+        #858585;
+
+    font-size:
+        .75rem;
+
+    letter-spacing:
+        3px;
+
+    text-transform:
+        uppercase;
+}
+
+
+/* =====================================================
+   TAG
+===================================================== */
+
+.tag-container {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+    margin:
+        20px 0;
+}
+
+
+.tag {
+
+    padding:
+        6px 12px;
+
+    color:
+        var(--gold-light);
+
+    background:
+        rgba(197,155,39,.045);
+
+    border:
+        1px solid
+        rgba(197,155,39,.22);
+
+    border-radius:
+        20px;
+
+    font-family:
+        'Fira Code',
+        monospace;
+
+    font-size:
+        10px;
+
+    transition:
+        .35s ease;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+}
+
+
+.tag::before {
+
+    content: "";
+
+    position:
+        absolute;
+
+    left:
+        -100%;
+
+    top:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,230,150,.15),
+            transparent
+        );
+
+    transition:
+        .6s;
+}
+
+
+.tag:hover::before {
+    left: 100%;
+}
+
+
+.tag:hover {
+
+    color:
+        #fff;
+
+    border-color:
+        var(--gold);
+
+    background:
+        rgba(197,155,39,.12);
+
+    box-shadow:
+        0 0 15px rgba(197,155,39,.15);
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav-menu {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    justify-content:
+        center;
+
+    gap:
+        9px;
+
+    list-style:
+        none;
+
+    margin-top:
+        22px;
+}
+
+
+.nav-menu a {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    padding:
+        9px 15px;
+
+    color:
+        #b8b8b8;
+
+    background:
+        rgba(255,255,255,.018);
+
+    border:
+        1px solid
+        rgba(255,255,255,.07);
+
+    border-radius:
+        30px;
+
+    text-decoration:
+        none;
+
+    font-size:
+        .76rem;
+
+    font-weight:
+        600;
+
+    transition:
+        .35s ease;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+}
+
+
+.nav-menu a::before {
+
+    content: "";
+
+    position:
+        absolute;
+
+    left:
+        -100%;
+
+    top:
+        0;
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(197,155,39,.13),
+            transparent
+        );
+
+    transition:
+        .6s;
+}
+
+
+.nav-menu a:hover::before {
+    left: 100%;
+}
+
+
+.nav-menu a span {
+
+    color:
+        var(--gold);
+
+    transition:
+        .3s;
+}
+
+
+.nav-menu a:hover {
+
+    color:
+        var(--gold-bright);
+
+    border-color:
+        rgba(197,155,39,.45);
+
+    background:
+        rgba(197,155,39,.07);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+
+        0 8px 25px rgba(0,0,0,.4),
+
+        0 0 15px rgba(197,155,39,.08);
+}
+
+
+.nav-menu a:hover span {
+
+    text-shadow:
+        0 0 10px var(--gold);
+
+    transform:
+        rotate(90deg);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.content-section {
+
+    max-width:
+        750px;
+
+    margin:
+        auto;
+
+    animation:
+        contentAppear 1s ease .3s both;
+}
+
+
+@keyframes contentAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+h2 {
+
+    font-family:
+        'Cinzel',
+        serif;
+
+    text-align:
+        center;
+
+    color:
+        var(--gold-light);
+
+    font-size:
+        1.45rem;
+
+    letter-spacing:
+        3px;
+
+    margin-bottom:
+        25px;
+
+    text-shadow:
+        0 0 20px rgba(197,155,39,.15);
+}
+
+
+/* =====================================================
+   WELCOME BANNER
+===================================================== */
+
+.welcome-banner {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    padding:
+        18px 20px;
+
+    margin-bottom:
+        25px;
+
+    border-radius:
+        16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(197,155,39,.10),
+            rgba(197,155,39,.025)
+        );
+
+    border:
+        1px solid
+        rgba(197,155,39,.25);
+
+    box-shadow:
+
+        0 10px 30px rgba(0,0,0,.3),
+
+        inset 0 0 25px
+        rgba(197,155,39,.025);
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    transition:
+        .4s ease;
+}
+
+
+.welcome-banner::before {
+
+    content: "";
+
+    position:
+        absolute;
+
+    left:
+        -100%;
+
+    top:
+        0;
+
+    width:
+        70%;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,230,150,.08),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        .8s;
+}
+
+
+.welcome-banner:hover::before {
+    left: 130%;
+}
+
+
+.welcome-banner:hover {
+
+    border-color:
+        rgba(197,155,39,.45);
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.4),
+
+        0 0 20px rgba(197,155,39,.08);
+}
+
+
+.welcome-icon {
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-shrink:
+        0;
+
+    border-radius:
+        50%;
+
+    color:
+        var(--gold-light);
+
+    background:
+        rgba(197,155,39,.08);
+
+    border:
+        1px solid
+        rgba(197,155,39,.3);
+
+    font-size:
+        1.15rem;
+
+    box-shadow:
+        0 0 15px rgba(197,155,39,.08);
+
+    animation:
+        iconPulse 2.5s ease-in-out infinite;
+}
+
+
+@keyframes iconPulse {
+
+    50% {
+        box-shadow:
+            0 0 25px rgba(197,155,39,.22);
+    }
+
+}
+
+
+.welcome-text {
+
+    color:
+        #c3c3c3;
+
+    font-size:
+        .9rem;
+
+    line-height:
+        1.6;
+}
+
+
+.welcome-text b {
+
+    color:
+        var(--gold-light);
+
+    font-weight:
+        700;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+
+    color:
+        #929292;
+
+    font-size:
+        .92rem;
+
+    line-height:
+        1.9;
+
+    text-align:
+        justify;
+
+    padding:
+        0 5px;
+}
+
+
+/* =====================================================
+   DIVIDER
+===================================================== */
+
+.divider {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    margin:
+        30px 0;
+}
+
+
+.divider::before,
+.divider::after {
+
+    content:
+        "";
+
+    height:
+        1px;
+
+    flex:
+        1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(197,155,39,.35)
+        );
+}
+
+
+.divider::after {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(197,155,39,.35),
+            transparent
+        );
+}
+
+
+.divider span {
+
+    color:
+        var(--gold);
+
+    font-size:
+        .75rem;
+
+    font-family:
+        'Fira Code',
+        monospace;
+
+    text-shadow:
+        0 0 12px rgba(197,155,39,.3);
+}
+
+
+/* =====================================================
+   POEM TITLE
+===================================================== */
+
+.poem-title {
+
+    color:
+        var(--gold-light);
+
+    font-family:
+        'Cinzel',
+        serif;
+
+    font-size:
+        1.1rem;
+
+    letter-spacing:
+        2px;
+
+    margin-bottom:
+        15px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+}
+
+
+.poem-title span {
+
+    color:
+        var(--gold);
+
+    font-family:
+        'Fira Code',
+        monospace;
+
+    font-size:
+        .8rem;
+
+    text-shadow:
+        0 0 10px var(--gold);
+}
+
+
+/* =====================================================
+   POEM CARD
+===================================================== */
+
+.poem {
+
+    position:
+        relative;
+
+    padding:
+        28px 28px 28px 30px;
+
+    border-radius:
+        0 18px 18px 0;
+
+    border-left:
+        3px solid var(--gold);
+
+    border-top:
+        1px solid
+        rgba(197,155,39,.14);
+
+    border-right:
+        1px solid
+        rgba(197,155,39,.08);
+
+    border-bottom:
+        1px solid
+        rgba(197,155,39,.08);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(197,155,39,.065),
+            rgba(255,255,255,.012)
+        );
+
+    color:
+        #aeb0b5;
+
+    font-size:
+        .92rem;
+
+    line-height:
+        2;
+
+    font-style:
+        italic;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.3);
+
+    transition:
+        .45s ease;
+
+    overflow:
+        hidden;
+}
+
+
+.poem::after {
+
+    content: "";
+
+    position:
+        absolute;
+
+    top:
+        -100%;
+
+    left:
+        -60%;
+
+    width:
+        40%;
+
+    height:
+        300%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,230,150,.07),
+            transparent
+        );
+
+    transform:
+        rotate(25deg);
+
+    transition:
+        .9s;
+
+    pointer-events:
+        none;
+}
+
+
+.poem:hover::after {
+
+    left:
+        130%;
+}
+
+
+.poem:hover {
+
+    transform:
+        translateX(5px);
+
+    border-left-color:
+        var(--gold-light);
+
+    box-shadow:
+
+        0 15px 40px rgba(0,0,0,.45),
+
+        -5px 0 25px
+        rgba(197,155,39,.08);
+}
+
+
+.poem::before {
+
+    content:
+        "“";
+
+    position:
+        absolute;
+
+    top:
+        -20px;
+
+    right:
+        25px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        6rem;
+
+    color:
+        rgba(197,155,39,.08);
+
+    line-height:
+        1;
+}
+
+
+.poem strong {
+
+    color:
+        var(--gold-light);
+
+    font-style:
+        normal;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer {
+
+    text-align:
+        center;
+
+    margin-top:
+        35px;
+
+    padding-top:
+        20px;
+
+    border-top:
+        1px solid
+        rgba(197,155,39,.10);
+
+    color:
+        #4d4d4d;
+
+    font-family:
+        'Fira Code',
+        monospace;
+
+    font-size:
+        .65rem;
+
+    letter-spacing:
+        1px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width:768px) {
+
+    body {
+        padding:
+            20px 12px;
+    }
+
+    .container {
+        padding:
+            30px 18px;
+
+        border-radius:
+            22px;
+    }
+
+    .profile-wrapper {
+        width:
+            120px;
+
+        height:
+            120px;
+    }
+
+    .profile-wrapper::before {
+        width:
+            120px;
+
+        height:
+            120px;
+    }
+
+    .profile-img {
+        width:
+            104px;
+
+        height:
+            104px;
+    }
+
+    .site-name {
+        font-size:
+            1.4rem;
+
+        letter-spacing:
+            3px;
+    }
+
+    .site-description {
+        font-size:
+            .65rem;
+
+        letter-spacing:
+            2px;
+    }
+
+    .nav-menu {
+        gap:
+            7px;
+    }
+
+    .nav-menu a {
+        font-size:
+            .7rem;
+
+        padding:
+            7px 10px;
+    }
+
+    h2 {
+        font-size:
+            1.05rem;
+
+        line-height:
+            1.7;
+    }
+
+    .intro {
+        font-size:
+            .84rem;
+
+        text-align:
+            left;
+    }
+
+    .poem {
+        padding:
+            22px 20px;
+
+        font-size:
+            .83rem;
+
+        line-height:
+            1.9;
+    }
+
+    .welcome-banner {
+        padding:
+            14px;
+    }
+
+    .welcome-text {
+        font-size:
+            .8rem;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONE
+===================================================== */
+
+@media (max-width:400px) {
+
+    .container {
+        padding:
+            25px 14px;
+    }
+
+    .site-name {
+        font-size:
+            1.2rem;
+
+        letter-spacing:
+            2px;
+    }
+
+    .tag {
+        font-size:
+            9px;
+
+        padding:
+            5px 9px;
+    }
+
+    .nav-menu a {
+        padding:
+            6px 8px;
+
+        font-size:
+            9px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<div class="header-section">
+
+
+    <!-- FOTO PROFIL -->
+
+    <div class="profile-wrapper">
+
+        <img
+            class="profile-img"
+            src="ya.jfif"
+            alt="Foto Profil Faiz NNCLHNT"
+        >
+
+        <div class="status-badge">
+            Active
+        </div>
+
+    </div>
+
+
+    <!-- NAMA -->
+
+    <div class="site-name">
+        FAIZ NNCLHNT
+    </div>
+
+
+    <div class="site-description">
+        Personal Website • pais • nnclhnt
+    </div>
+
+
+    <!-- TAG -->
+
+    <div class="tag-container">
+
+        <span class="tag">
+            #faiznnclhnt
+        </span>
+
+        <span class="tag">
+            #gtgtbgt
+        </span>
+
+        <span class="tag">
+            #idk
+        </span>
+
+    </div>
+
+
+    <!-- NAVIGASI -->
+
+    <ul class="nav-menu">
+
+        <li>
+            <a href="index.html">
+                <span>✦</span>
+                Beranda
+            </a>
+        </li>
+
+        <li>
+            <a href="profil.html">
+                <span>✦</span>
+                Profil
+            </a>
+        </li>
+
+        <li>
+            <a href="kegiatan.html">
+                <span>✦</span>
+                Kegiatan
+            </a>
+        </li>
+
+        <li>
+            <a href="foto.html">
+                <span>✦</span>
+                Foto-foto
+            </a>
+        </li>
+
+        <li>
+            <a href="hadist.html">
+                <span>✦</span>
+                Hadist
+            </a>
+        </li>
+
+        <li>
+            <a href="mailto:faiztugas152@gmail.com">
+                <span>✦</span>
+                Email
+            </a>
+        </li>
+
+    </ul>
+
+</div>
+
+
+<!-- =====================================================
+     CONTENT
+===================================================== -->
+
+<div class="content-section">
+
+
+    <h2>
+        SELAMAT DATANG DI WILAYAH FAIS
+    </h2>
+
+
+    <!-- WELCOME -->
+
+    <div class="welcome-banner">
+
+        <div class="welcome-icon">
+            ✨
+        </div>
+
+        <div class="welcome-text">
+
+            <b>Status Aktif</b><br>
+
+            AHLAN WA SAHLAN !!!
+
+        </div>
+
+    </div>
+
+
+    <!-- DESCRIPTION -->
+
+    <p class="intro">
+
+        Terima kasih telah memasuki web saya.
+        Di sini Anda dapat memantau data profil
+        serta rekam jejak aktivitas yang saya jalankan.
+        Di bawah ini adalah arsip puisi yang saya susun
+        saat menatap kepekatan langit malam.
+
+    </p>
+
+
+    <!-- DIVIDER -->
+
+    <div class="divider">
+
+        <span>✦ ✦ ✦</span>
+
+    </div>
+
+
+    <!-- POEM -->
+
+    <div class="poem-title">
+
+        <span>//</span>
+
+        Aku dan Tuhanku
+
+    </div>
+
+
+    <div class="poem">
+
+        Ketika aku memandang langit<br>
+
+        aku bertanya pada diriku<br>
+
+        aku...<br>
+        <br>
+
+        siapakah aku sebenarnya?<br>
+
+        from manakah aku berasal?<br>
+
+        jauhkah aku dari tuhan-ku?<br>
+
+        aku...<br>
+        <br>
+
+        Tuhan...<br>
+
+        betapa mutlak kuasa-Mu<br>
+
+        menciptakan semesta raya<br>
+
+        untuk menghidupi mereka<br>
+
+        seperti aku<br>
+
+        <br>
+
+        apakah aku sudah mengabdi?<br>
+
+        hanya aku dan Engkau yang mengerti...
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © 2026 • FAIZ NNCLHNT • PERSONAL WEBSITE
+
+    </div>
+
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>

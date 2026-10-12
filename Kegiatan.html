@@ -1,0 +1,1253 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kegiatan // Pais NNCLHNT</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --black: #050505;
+    --black-soft: #0b0b0b;
+    --card: rgba(14, 14, 14, 0.90);
+
+    --gold: #d4af37;
+    --gold-light: #f4d675;
+    --gold-bright: #ffe89a;
+    --gold-dark: #9e7a1e;
+
+    --white: #f8f5e8;
+    --gray: #aaa58f;
+
+    --line: rgba(212,175,55,.20);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    padding: 40px 18px;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+    color: var(--white);
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(212,175,55,.12),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 85%,
+            rgba(212,175,55,.09),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #020202,
+            #0a0a0a 50%,
+            #020202
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+}
+
+/* =====================================
+   AMBIENT GOLD LIGHT
+===================================== */
+
+body::before,
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    background: var(--gold);
+
+    filter: blur(90px);
+
+    opacity: .10;
+
+    pointer-events: none;
+
+    animation: ambientMove 10s ease-in-out infinite alternate;
+}
+
+body::before {
+    top: -180px;
+    left: -150px;
+}
+
+body::after {
+    right: -160px;
+    bottom: -180px;
+
+    animation-delay: -4s;
+}
+
+@keyframes ambientMove {
+
+    0% {
+        transform: translate(0,0) scale(1);
+        opacity: .08;
+    }
+
+    50% {
+        transform: translate(50px,30px) scale(1.15);
+        opacity: .15;
+    }
+
+    100% {
+        transform: translate(-20px,60px) scale(.95);
+        opacity: .08;
+    }
+}
+
+
+/* =====================================
+   MAIN CARD
+===================================== */
+
+.card-container {
+
+    width: 100%;
+    max-width: 950px;
+
+    padding: 48px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(22,22,22,.96),
+            rgba(7,7,7,.97)
+        );
+
+    border: 1px solid rgba(212,175,55,.22);
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+
+    box-shadow:
+        0 35px 90px rgba(0,0,0,.75),
+        0 0 45px rgba(212,175,55,.07),
+        inset 0 0 40px rgba(212,175,55,.025);
+
+    animation: containerAppear 1s cubic-bezier(.2,.8,.2,1);
+}
+
+@keyframes containerAppear {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(40px)
+            scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =====================================
+   GOLD TOP LINE
+===================================== */
+
+.card-container::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 280px;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold-dark),
+            var(--gold-light),
+            var(--gold-dark),
+            transparent
+        );
+
+    box-shadow:
+        0 0 12px var(--gold),
+        0 0 30px rgba(212,175,55,.5);
+
+    animation: topLine 3s ease-in-out infinite;
+}
+
+@keyframes topLine {
+
+    0%,100% {
+        width: 180px;
+        opacity: .55;
+    }
+
+    50% {
+        width: 340px;
+        opacity: 1;
+    }
+}
+
+
+/* =====================================
+   DECORATIVE LIGHT
+===================================== */
+
+.card-container::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    right: -150px;
+    top: -150px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(212,175,55,.055);
+
+    filter: blur(5px);
+
+    pointer-events: none;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header {
+
+    position: relative;
+
+    text-align: center;
+
+    margin-bottom: 38px;
+
+    animation: headerAppear 1s ease .15s both;
+}
+
+@keyframes headerAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.logo {
+
+    font-family: 'Fira Code', monospace;
+
+    font-size: .72rem;
+
+    letter-spacing: 7px;
+
+    color: var(--gold-light);
+
+    margin-bottom: 12px;
+
+    text-shadow:
+        0 0 15px rgba(212,175,55,.15);
+}
+
+
+h2 {
+
+    font-family: 'Cinzel', serif;
+
+    color: var(--gold-light);
+
+    font-size: 1.65rem;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+        0 0 20px rgba(212,175,55,.15);
+
+    animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+
+    0%,100% {
+        text-shadow:
+            0 0 12px rgba(212,175,55,.10);
+    }
+
+    50% {
+        text-shadow:
+            0 0 28px rgba(212,175,55,.28);
+    }
+}
+
+
+.subtitle {
+
+    color: var(--gray);
+
+    font-size: .7rem;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+}
+
+
+.header-line {
+
+    width: 85px;
+    height: 2px;
+
+    margin: 20px auto 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
+
+    box-shadow:
+        0 0 12px rgba(212,175,55,.3);
+
+    animation: linePulse 2.5s ease-in-out infinite;
+}
+
+@keyframes linePulse {
+
+    0%,100% {
+        width: 65px;
+        opacity: .55;
+    }
+
+    50% {
+        width: 110px;
+        opacity: 1;
+    }
+}
+
+
+/* =====================================
+   ACTIVITY CARD
+===================================== */
+
+.activity-card {
+
+    display: flex;
+
+    width: 100%;
+
+    min-height: 220px;
+
+    margin-bottom: 23px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(212,175,55,.055),
+            rgba(255,255,255,.012)
+        );
+
+    border: 1px solid rgba(212,175,55,.15);
+
+    border-radius: 19px;
+
+    transition:
+        transform .45s ease,
+        border-color .45s ease,
+        box-shadow .45s ease;
+
+    animation: cardAppear .8s ease both;
+}
+
+.activity-card:nth-of-type(2) {
+    animation-delay: .15s;
+}
+
+.activity-card:nth-of-type(3) {
+    animation-delay: .3s;
+}
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(30px)
+            scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* Shine */
+
+.activity-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 65%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(244,214,117,.08),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition: .9s;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.activity-card:hover::before {
+    left: 130%;
+}
+
+
+/* Gold side glow */
+
+.activity-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 20%;
+
+    width: 2px;
+    height: 60%;
+
+    background:
+        linear-gradient(
+            transparent,
+            var(--gold),
+            transparent
+        );
+
+    box-shadow:
+        0 0 12px rgba(212,175,55,.45);
+
+    opacity: .35;
+
+    transition: .4s;
+}
+
+.activity-card:hover::after {
+    opacity: 1;
+}
+
+
+/* Hover */
+
+.activity-card:hover {
+
+    transform:
+        translateY(-6px)
+        scale(1.008);
+
+    border-color:
+        rgba(212,175,55,.42);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.55),
+        0 0 28px rgba(212,175,55,.07);
+}
+
+
+/* =====================================
+   NUMBER
+===================================== */
+
+.activity-number {
+
+    position: absolute;
+
+    top: 16px;
+    right: 18px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: var(--gold-light);
+
+    font-family: 'Cinzel', serif;
+
+    font-size: .82rem;
+
+    border: 1px solid rgba(212,175,55,.4);
+
+    background:
+        rgba(5,5,5,.85);
+
+    box-shadow:
+        0 0 15px rgba(212,175,55,.06);
+
+    z-index: 3;
+
+    transition: .4s;
+}
+
+.activity-card:hover .activity-number {
+
+    color: var(--gold-bright);
+
+    border-color: var(--gold);
+
+    transform: rotate(8deg) scale(1.08);
+
+    box-shadow:
+        0 0 20px rgba(212,175,55,.18);
+}
+
+
+/* =====================================
+   IMAGE
+===================================== */
+
+.activity-img-wrapper {
+
+    width: 280px;
+    min-width: 280px;
+
+    padding: 13px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.activity-img {
+
+    width: 100%;
+    height: 195px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 13px;
+
+    border: 1px solid rgba(212,175,55,.3);
+
+    filter:
+        grayscale(100%)
+        contrast(105%);
+
+    transition:
+        .6s cubic-bezier(.2,.8,.2,1);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.5);
+}
+
+
+.activity-card:hover .activity-img {
+
+    filter:
+        grayscale(0%)
+        contrast(105%);
+
+    transform:
+        scale(1.035);
+
+    border-color:
+        var(--gold);
+
+    box-shadow:
+        0 0 30px rgba(212,175,55,.18);
+}
+
+
+/* =====================================
+   TEXT
+===================================== */
+
+.activity-text {
+
+    flex: 1;
+
+    padding: 35px 45px 30px 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.activity-text h3 {
+
+    font-family: 'Cinzel', serif;
+
+    color: var(--gold-light);
+
+    font-size: 1.05rem;
+
+    line-height: 1.6;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 13px;
+
+    transition: .3s;
+}
+
+
+.activity-text h3::before {
+
+    content: "✦";
+
+    color: var(--gold);
+
+    margin-right: 10px;
+
+    font-size: .75rem;
+
+    text-shadow:
+        0 0 10px rgba(212,175,55,.4);
+}
+
+
+.activity-card:hover .activity-text h3 {
+    color: var(--gold-bright);
+}
+
+
+.activity-text p {
+
+    color: var(--gray);
+
+    font-size: .84rem;
+
+    line-height: 1.8;
+
+    max-width: 560px;
+
+    transition: .3s;
+}
+
+.activity-card:hover .activity-text p {
+    color: #c3bda9;
+}
+
+
+/* =====================================
+   INFO
+===================================== */
+
+.info {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 17px;
+}
+
+
+.info span {
+
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(212,175,55,.2);
+
+    background:
+        rgba(212,175,55,.045);
+
+    color: #9d9887;
+
+    font-family: 'Fira Code', monospace;
+
+    font-size: .65rem;
+
+    transition: .35s;
+}
+
+
+.info span:first-child {
+    color: var(--gold-light);
+}
+
+
+.info span:hover {
+
+    color: var(--gold-bright);
+
+    border-color:
+        rgba(212,175,55,.45);
+
+    background:
+        rgba(212,175,55,.08);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =====================================
+   DIVIDER
+===================================== */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 32px 0;
+}
+
+
+.divider::before,
+.divider::after {
+
+    content: "";
+
+    height: 1px;
+
+    flex: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--line)
+        );
+}
+
+
+.divider::after {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--line),
+            transparent
+        );
+}
+
+
+.divider span {
+
+    color: var(--gold);
+
+    font-size: .7rem;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 0 12px rgba(212,175,55,.35);
+
+    animation: dividerGlow 2s ease-in-out infinite;
+}
+
+@keyframes dividerGlow {
+
+    0%,100% {
+        opacity: .55;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+
+/* =====================================
+   BACK BUTTON
+===================================== */
+
+.back-link {
+
+    text-align: center;
+
+    margin-top: 34px;
+}
+
+
+.back-link a {
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 13px 29px;
+
+    border-radius: 50px;
+
+    color: #090909;
+
+    text-decoration: none;
+
+    font-size: .72rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold-light),
+            var(--gold),
+            var(--gold-dark)
+        );
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.5),
+        0 0 20px rgba(212,175,55,.12);
+
+    transition: .4s ease;
+}
+
+
+.back-link a::before {
+
+    content: "←";
+
+    font-size: 1rem;
+}
+
+
+.back-link a::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 60%;
+    height: 100%;
+
+    background:
+        rgba(255,255,255,.25);
+
+    transform: skewX(-20deg);
+
+    transition: .7s;
+}
+
+
+.back-link a:hover::after {
+    left: 130%;
+}
+
+
+.back-link a:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.6),
+        0 0 30px rgba(212,175,55,.25);
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+
+    text-align: center;
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(212,175,55,.08);
+
+    color: #4f4a3e;
+
+    font-family: 'Fira Code', monospace;
+
+    font-size: .63rem;
+
+    letter-spacing: 1.5px;
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 20px 12px;
+    }
+
+    .card-container {
+        padding: 32px 18px;
+        border-radius: 23px;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+        letter-spacing: 2px;
+        line-height: 1.6;
+    }
+
+    .logo {
+        font-size: .6rem;
+        letter-spacing: 5px;
+    }
+
+    .subtitle {
+        font-size: .62rem;
+        letter-spacing: 2.5px;
+    }
+
+    .activity-card {
+        flex-direction: column;
+    }
+
+    .activity-img-wrapper {
+        width: 100%;
+        min-width: 0;
+        padding: 13px;
+    }
+
+    .activity-img {
+        width: 100%;
+        height: 210px;
+    }
+
+    .activity-text {
+        padding: 20px;
+    }
+
+    .activity-text h3 {
+        font-size: .9rem;
+        padding-right: 40px;
+    }
+
+    .activity-text p {
+        font-size: .78rem;
+    }
+
+    .activity-number {
+        top: 20px;
+        right: 20px;
+    }
+}
+
+
+/* =====================================
+   HP KECIL
+===================================== */
+
+@media (max-width: 480px) {
+
+    .card-container {
+        padding: 27px 14px;
+    }
+
+    .activity-img {
+        height: 180px;
+    }
+
+    .activity-text {
+        padding: 18px;
+    }
+
+    .activity-text h3 {
+        font-size: .82rem;
+        line-height: 1.5;
+    }
+
+    .activity-text p {
+        font-size: .75rem;
+        line-height: 1.7;
+    }
+
+    .info span {
+        font-size: .58rem;
+    }
+
+    .activity-number {
+        width: 35px;
+        height: 35px;
+        font-size: .7rem;
+    }
+
+    .back-link a {
+        font-size: .63rem;
+        padding: 11px 20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card-container">
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="logo">
+            FAIZ NNCLHNT
+        </div>
+
+        <h2>
+            :: LOG KEGIATAN PAIS ::
+        </h2>
+
+        <div class="subtitle">
+            Jejak Langkah • Pengalaman • Cerita
+        </div>
+
+        <div class="header-line"></div>
+
+    </div>
+
+
+    <!-- KEGIATAN 01 -->
+
+    <div class="activity-card">
+
+        <div class="activity-number">
+            01
+        </div>
+
+        <div class="activity-img-wrapper">
+
+            <img
+                class="activity-img"
+                src="umrah.jfif"
+                alt="Kegiatan Umrah Bersama Teman"
+            >
+
+        </div>
+
+        <div class="activity-text">
+
+            <h3>
+                Kegiatan Awal Tahun Bersama Teman
+            </h3>
+
+            <p>
+                Pada awal tahun 2027 nanti saya ingin pergi
+                umrah bersama teman-teman kelas ku menggunakan
+                pesawat pribadi nya pondok pesantren.
+            </p>
+
+            <div class="info">
+
+                <span>
+                    ✦ Tahun 2027
+                </span>
+
+                <span>
+                    ✦ Mekkah - Madinah
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- KEGIATAN 02 -->
+
+    <div class="activity-card">
+
+        <div class="activity-number">
+            02
+        </div>
+
+        <div class="activity-img-wrapper">
+
+            <img
+                class="activity-img"
+                src="bali.jfif"
+                alt="Kegiatan Bali Tahun Baru"
+            >
+
+        </div>
+
+        <div class="activity-text">
+
+            <h3>
+                Kegiatan Akhir Tahun Bersama Teman
+            </h3>
+
+            <p>
+                Pada pertengahan tahun 2027 nanti saya dan
+                teman-teman mempunyai acara tahun baruan di Bali.
+                Rencananya kami di Bali mulai tanggal 29 Desember
+                sampai 2 Januari.
+            </p>
+
+            <div class="info">
+
+                <span>
+                    ✦ 29 Desember - 2 Januari
+                </span>
+
+                <span>
+                    ✦ Bali - Indonesia
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- DIVIDER -->
+
+    <div class="divider">
+
+        <span>✦ ✦ ✦</span>
+
+    </div>
+
+
+    <!-- BACK -->
+
+    <div class="back-link">
+
+        <a href="index.html">
+            KEMBALI KE HALAMAN UTAMA
+        </a>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © 2026 • PAIS NNCLHNT • ACTIVITY LOG
+
+    </div>
+
+</div>
+
+</body>
+</html>
