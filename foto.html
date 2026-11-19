@@ -1,1484 +1,360 @@
-
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Foto-foto // Pais NNCLHNT</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-/* =====================================================
-   GOLD LUXURY THEME
-===================================================== */
-
-:root {
-
-    --black: #050505;
-    --black-soft: #0b0b0b;
-    --card: rgba(15,15,15,.92);
-
-    --gold: #c59b27;
-    --gold-light: #f1d477;
-    --gold-bright: #ffe9a3;
-    --gold-dark: #806015;
-
-    --gold-glow: rgba(197,155,39,.45);
-
-    --white: #f8fafc;
-    --gray: #a1a1aa;
-    --dark-gray: #555;
-
-    --border: rgba(197,155,39,.25);
-}
-
-
-/* =====================================================
-   RESET
-===================================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-/* =====================================================
-   BODY
-===================================================== */
-
-body {
-
-    min-height: 100vh;
-
-    padding: 35px 18px;
-
-    font-family: 'Plus Jakarta Sans', sans-serif;
-
-    color: var(--white);
-
-    overflow-x: hidden;
-
-    background:
-
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(197,155,39,.14),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(197,155,39,.11),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 50% 50%,
-            rgba(197,155,39,.035),
-            transparent 50%
-        ),
-
-        linear-gradient(
-            135deg,
-            #030303,
-            #0c0c0c 50%,
-            #030303
-        );
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    position: relative;
-}
-
-
-/* =====================================================
-   AMBIENT LIGHT
-===================================================== */
-
-body::before {
-
-    content: "";
-
-    position: fixed;
-
-    width: 500px;
-    height: 500px;
-
-    left: -250px;
-    top: -250px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(197,155,39,.12),
-            transparent 70%
-        );
-
-    filter: blur(20px);
-
-    animation:
-        ambientMove 9s ease-in-out infinite alternate;
-
-    pointer-events: none;
-}
-
-
-body::after {
-
-    content: "";
-
-    position: fixed;
-
-    width: 450px;
-    height: 450px;
-
-    right: -220px;
-    bottom: -220px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(197,155,39,.10),
-            transparent 70%
-        );
-
-    filter: blur(20px);
-
-    animation:
-        ambientMove2 11s ease-in-out infinite alternate;
-
-    pointer-events: none;
-}
-
-
-@keyframes ambientMove {
-
-    from {
-        transform: translate(0,0) scale(1);
-    }
-
-    to {
-        transform: translate(150px,100px) scale(1.25);
-    }
-
-}
-
-
-@keyframes ambientMove2 {
-
-    from {
-        transform: translate(0,0) scale(1);
-    }
-
-    to {
-        transform: translate(-120px,-100px) scale(1.3);
-    }
-
-}
-
-
-/* =====================================================
-   MAIN CONTAINER
-===================================================== */
-
-.container {
-
-    width: 100%;
-
-    max-width: 950px;
-
-    padding: 45px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(25,25,25,.94),
-            rgba(8,8,8,.96)
-        );
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 30px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    backdrop-filter: blur(20px);
-
-    -webkit-backdrop-filter: blur(20px);
-
-    box-shadow:
-
-        0 30px 80px rgba(0,0,0,.75),
-
-        0 0 50px rgba(197,155,39,.06),
-
-        inset 0 0 50px rgba(197,155,39,.025);
-
-    animation:
-        containerEnter 1s ease forwards;
-}
-
-
-@keyframes containerEnter {
-
-    from {
-        opacity: 0;
-        transform: translateY(30px) scale(.98);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
-}
-
-
-/* =====================================================
-   GOLD TOP LINE
-===================================================== */
-
-.container::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: 260px;
-
-    height: 3px;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            transparent,
-            var(--gold-dark),
-            var(--gold-bright),
-            var(--gold),
-            transparent
-        );
-
-    box-shadow:
-
-        0 0 10px var(--gold-glow),
-        0 0 25px var(--gold-glow);
-
-    animation:
-        goldLine 3s ease-in-out infinite;
-}
-
-
-@keyframes goldLine {
-
-    0%,100% {
-        opacity: .5;
-        width: 180px;
-    }
-
-    50% {
-        opacity: 1;
-        width: 330px;
-    }
-
-}
-
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-.header-section {
-
-    text-align: center;
-
-    padding-bottom: 28px;
-
-    margin-bottom: 30px;
-
-    border-bottom:
-        1px solid
-        rgba(197,155,39,.18);
-
-    position: relative;
-}
-
-
-/* =====================================================
-   PROFILE
-===================================================== */
-
-.profile-wrapper {
-
-    position: relative;
-
-    width: 130px;
-    height: 130px;
-
-    margin:
-        0 auto 20px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-}
-
-
-/* rotating ring */
-
-.profile-wrapper::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 130px;
-    height: 130px;
-
-    border-radius: 50%;
-
-    border:
-        2px solid transparent;
-
-    border-top-color:
-        var(--gold-light);
-
-    border-right-color:
-        var(--gold);
-
-    box-shadow:
-        0 0 18px rgba(197,155,39,.25);
-
-    animation:
-        rotateRing 5s linear infinite;
-}
-
-
-@keyframes rotateRing {
-
-    to {
-        transform: rotate(360deg);
-    }
-
-}
-
-
-.profile-img {
-
-    width: 112px;
-    height: 112px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border:
-        2px solid var(--gold);
-
-    padding: 3px;
-
-    background: #050505;
-
-    filter:
-        grayscale(100%)
-        contrast(110%);
-
-    transition:
-        .5s ease;
-
-    position: relative;
-
-    z-index: 2;
-
-    box-shadow:
-
-        0 0 0 5px rgba(197,155,39,.04),
-
-        0 10px 35px rgba(0,0,0,.7);
-}
-
-
-.profile-img:hover {
-
-    filter: grayscale(0%);
-
-    transform:
-        scale(1.08);
-
-    border-color:
-        var(--gold-bright);
-
-    box-shadow:
-
-        0 0 20px rgba(197,155,39,.5),
-
-        0 0 50px rgba(197,155,39,.18);
-}
-
-
-/* =====================================================
-   STATUS
-===================================================== */
-
-.status-badge {
-
-    position: absolute;
-
-    right: 0;
-    bottom: 3px;
-
-    z-index: 5;
-
-    padding:
-        4px 9px;
-
-    color:
-        var(--gold-bright);
-
-    background:
-        #080808;
-
-    border:
-        1px solid
-        var(--gold);
-
-    border-radius:
-        20px;
-
-    font-family:
-        'Fira Code',
-        monospace;
-
-    font-size:
-        9px;
-
-    box-shadow:
-        0 0 12px rgba(197,155,39,.2);
-}
-
-
-.status-badge::before {
-
-    content: "●";
-
-    margin-right: 5px;
-
-    color:
-        var(--gold-light);
-
-    animation:
-        statusPulse 1.5s infinite;
-}
-
-
-@keyframes statusPulse {
-
-    50% {
-        opacity: .35;
-    }
-
-}
-
-
-/* =====================================================
-   TAGS
-===================================================== */
-
-.tag-container {
-
-    display: flex;
-
-    justify-content: center;
-
-    flex-wrap: wrap;
-
-    gap: 8px;
-
-    margin-top: 12px;
-}
-
-
-.tag {
-
-    padding:
-        6px 12px;
-
-    color:
-        var(--gold-light);
-
-    background:
-        rgba(197,155,39,.045);
-
-    border:
-        1px solid
-        rgba(197,155,39,.22);
-
-    border-radius:
-        20px;
-
-    font-family:
-        'Fira Code',
-        monospace;
-
-    font-size:
-        10px;
-
-    transition:
-        .35s ease;
-}
-
-
-.tag:hover {
-
-    color:
-        #fff;
-
-    border-color:
-        var(--gold);
-
-    background:
-        rgba(197,155,39,.12);
-
-    box-shadow:
-        0 0 15px rgba(197,155,39,.15);
-
-    transform:
-        translateY(-3px);
-}
-
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
-
-.nav-menu {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-    gap: 9px;
-
-    list-style: none;
-
-    margin-top: 22px;
-}
-
-
-.nav-menu a {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 7px;
-
-    padding:
-        9px 15px;
-
-    color:
-        #b8b8b8;
-
-    background:
-        rgba(255,255,255,.018);
-
-    border:
-        1px solid
-        rgba(255,255,255,.07);
-
-    border-radius:
-        30px;
-
-    text-decoration:
-        none;
-
-    font-size:
-        .76rem;
-
-    font-weight:
-        600;
-
-    transition:
-        .35s ease;
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-}
-
-
-.nav-menu a::before {
-
-    content: "";
-
-    position: absolute;
-
-    left: -100%;
-
-    top: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(197,155,39,.12),
-            transparent
-        );
-
-    transition:
-        .5s;
-}
-
-
-.nav-menu a:hover::before {
-    left: 100%;
-}
-
-
-.nav-menu a span {
-
-    color:
-        var(--gold);
-
-    transition:
-        .3s;
-}
-
-
-.nav-menu a:hover {
-
-    color:
-        var(--gold-bright);
-
-    border-color:
-        rgba(197,155,39,.45);
-
-    background:
-        rgba(197,155,39,.07);
-
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.4),
-
-        0 0 15px rgba(197,155,39,.08);
-}
-
-
-.nav-menu a:hover span {
-
-    text-shadow:
-        0 0 10px var(--gold);
-
-    transform:
-        rotate(90deg);
-}
-
-
-/* =====================================================
-   TITLE
-===================================================== */
-
-h2 {
-
-    text-align: center;
-
-    color:
-        var(--gold-light);
-
-    font-family:
-        'Cinzel',
-        serif;
-
-    font-size:
-        1.55rem;
-
-    letter-spacing:
-        4px;
-
-    margin-bottom:
-        8px;
-
-    text-shadow:
-        0 0 20px rgba(197,155,39,.16);
-}
-
-
-.subtitle {
-
-    text-align: center;
-
-    color:
-        #666;
-
-    font-family:
-        'Fira Code',
-        monospace;
-
-    font-size:
-        10px;
-
-    letter-spacing:
-        4px;
-
-    margin-bottom:
-        30px;
-}
-
-
-/* =====================================================
-   PHOTO GRID
-===================================================== */
-
-.photo-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3,1fr);
-
-    gap:
-        20px;
-
-    max-width:
-        850px;
-
-    margin:
-        auto;
-}
-
-
-/* =====================================================
-   PHOTO CARD
-===================================================== */
-
-.photo-card {
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-
-    background:
-        linear-gradient(
-            145deg,
-            #181818,
-            #0c0c0c
-        );
-
-    border:
-        1px solid
-        rgba(197,155,39,.12);
-
-    border-radius:
-        17px;
-
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.45);
-
-    transition:
-        .5s cubic-bezier(.2,.8,.2,1);
-
-    opacity: 0;
-
-    animation:
-        cardAppear .8s ease forwards;
-}
-
-
-.photo-card:nth-child(1) {
-    animation-delay: .2s;
-}
-
-.photo-card:nth-child(2) {
-    animation-delay: .4s;
-}
-
-.photo-card:nth-child(3) {
-    animation-delay: .6s;
-}
-
-
-@keyframes cardAppear {
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-
-}
-
-
-/* moving shine */
-
-.photo-card::before {
-
-    content: "";
-
-    position:
-        absolute;
-
-    top:
-        -100%;
-
-    left:
-        -80%;
-
-    width:
-        60%;
-
-    height:
-        300%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,230,150,.08),
-            transparent
-        );
-
-    transform:
-        rotate(25deg);
-
-    transition:
-        .8s;
-
-    z-index:
-        4;
-
-    pointer-events:
-        none;
-}
-
-
-.photo-card:hover::before {
-
-    left:
-        130%;
-}
-
-
-/* GOLD BORDER LIGHT */
-
-.photo-card::after {
-
-    content: "";
-
-    position:
-        absolute;
-
-    inset:
-        0;
-
-    border:
-        1px solid transparent;
-
-    border-radius:
-        inherit;
-
-    pointer-events:
-        none;
-
-    transition:
-        .5s;
-
-}
-
-
-.photo-card:hover {
-
-    transform:
-        translateY(-9px)
-        scale(1.015);
-
-    border-color:
-        rgba(197,155,39,.65);
-
-    box-shadow:
-
-        0 20px 45px rgba(0,0,0,.65),
-
-        0 0 25px rgba(197,155,39,.13);
-}
-
-
-.photo-card:hover::after {
-
-    border-color:
-        rgba(197,155,39,.35);
-
-    box-shadow:
-        inset 0 0 25px rgba(197,155,39,.05);
-}
-
-
-/* =====================================================
-   PHOTO BOX
-===================================================== */
-
-.photo-box {
-
-    height:
-        210px;
-
-    overflow:
-        hidden;
-
-    background:
-        #050505;
-
-    position:
-        relative;
-}
-
-
-.photo-box::after {
-
-    content: "";
-
-    position:
-        absolute;
-
-    inset:
-        0;
-
-    background:
-        linear-gradient(
-            180deg,
-            transparent 60%,
-            rgba(0,0,0,.55)
-        );
-
-    pointer-events:
-        none;
-}
-
-
-.photo-box img {
-
-    width:
-        100%;
-
-    height:
-        100%;
-
-    object-fit:
-        cover;
-
-    display:
-        block;
-
-    filter:
-        grayscale(55%)
-        brightness(.82);
-
-    transition:
-        1s cubic-bezier(.2,.8,.2,1);
-}
-
-
-.photo-card:hover .photo-box img {
-
-    filter:
-        grayscale(0%)
-        brightness(1);
-
-    transform:
-        scale(1.1);
-}
-
-
-/* =====================================================
-   CAPTION
-===================================================== */
-
-.photo-caption {
-
-    padding:
-        14px 10px;
-
-    text-align:
-        center;
-
-    color:
-        #cfcfcf;
-
-    background:
-        rgba(12,12,12,.96);
-
-    border-top:
-        1px solid
-        rgba(197,155,39,.12);
-
-    font-family:
-        'Fira Code',
-        monospace;
-
-    font-size:
-        10px;
-
-    letter-spacing:
-        .5px;
-
-    transition:
-        .3s;
-}
-
-
-.photo-card:hover .photo-caption {
-
-    color:
-        var(--gold-light);
-
-    background:
-        rgba(197,155,39,.045);
-
-}
-
-
-/* =====================================================
-   DIVIDER
-===================================================== */
-
-.divider {
-
-    height:
-        1px;
-
-    margin:
-        32px 0 0;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(197,155,39,.35),
-            transparent
-        );
-}
-
-
-/* =====================================================
-   BACK BUTTON
-===================================================== */
-
-.back-link {
-
-    text-align:
-        center;
-
-    margin-top:
-        25px;
-}
-
-
-.back-link a {
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    gap:
-        8px;
-
-    padding:
-        12px 24px;
-
-    color:
-        var(--gold-light);
-
-    background:
-        rgba(197,155,39,.055);
-
-    border:
-        1px solid
-        rgba(197,155,39,.3);
-
-    border-radius:
-        50px;
-
-    text-decoration:
-        none;
-
-    font-size:
-        10px;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        1.5px;
-
-    transition:
-        .35s;
-}
-
-
-.back-link a:hover {
-
-    color:
-        #080808;
-
-    background:
-        linear-gradient(
-            135deg,
-            var(--gold-bright),
-            var(--gold),
-            var(--gold-dark)
-        );
-
-    border-color:
-        var(--gold-light);
-
-    transform:
-        translateY(-4px);
-
-    box-shadow:
-        0 10px 30px rgba(197,155,39,.28);
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-.footer {
-
-    margin-top:
-        25px;
-
-    padding-top:
-        18px;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,.06);
-
-    text-align:
-        center;
-
-    color:
-        #4d4d4d;
-
-    font-family:
-        'Fira Code',
-        monospace;
-
-    font-size:
-        9px;
-
-    letter-spacing:
-        1px;
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media(max-width:750px) {
-
-    .container {
-        padding: 32px 22px;
-    }
-
-    .photo-grid {
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:480px) {
-
-    body {
-        padding:
-            15px 10px;
-    }
-
-    .container {
-        padding:
-            28px 15px;
-
-        border-radius:
-            22px;
-    }
-
-    h2 {
-        font-size:
-            1.2rem;
-
-        letter-spacing:
-            2px;
-    }
-
-    .subtitle {
-        letter-spacing:
-            2px;
-    }
-
-    .photo-grid {
-        grid-template-columns:
-            1fr;
-    }
-
-    .photo-box {
-        height:
-            220px;
-    }
-
-    .nav-menu {
-        gap:
-            6px;
-    }
-
-    .nav-menu a {
-        padding:
-            7px 10px;
-
-        font-size:
-            10px;
-    }
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Foto-foto // Pais NNCLHNT</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&family=Just+Me+Again+Down+Here&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/fonts/flux-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/inter-display-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+    <!-- ================= NAV ================= -->
+    <header class="nav">
+        <div class="nav-inner">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">F</span>
+                <span class="brand-name">Faiz<sup>®</sup></span>
+            </a>
 
-<div class="container">
+            <nav class="nav-links" aria-label="Navigasi utama">
+                <a href="index.html"><svg class="ni" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 6 7 1l6 5v7H9V9H5v4H1V6Z"/></svg><span>Beranda</span></a>
+                <a href="profil.html"><svg class="ni" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1a3 3 0 1 1 0 6 3 3 0 0 1 0-6ZM2 9h10v4H2V9Z"/></svg><span>Profil</span></a>
+                <a href="Kegiatan.html"><svg class="ni" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 3h5l1 2h6v8H1V3Z"/></svg><span>Kegiatan</span></a>
+                <a href="foto.html" class="is-active"><svg class="ni" viewBox="0 0 14 14" aria-hidden="true"><path fill-rule="evenodd" d="M1 4h3.1L5.5 2h3l1.4 2H13v8H1V4Zm6 1.4a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2Z"/></svg><span>Foto</span></a>
+                <a href="hadist.html"><svg class="ni" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 2.2c1.9-.7 3.8-.5 5.3.6v9.4C4.8 11 2.9 10.8 1 11.6V2.2Zm12 0c-1.9-.7-3.8-.5-5.3.6v9.4c1.5-1.2 3.4-1.4 5.3-.6V2.2Z"/></svg><span>Hadist</span></a>
+            </nav>
 
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
-<div class="header-section">
-
-
-    <div class="profile-wrapper">
-
-        <img
-            class="profile-img"
-            src="ya.jfif"
-            alt="Foto Profil"
-        >
-
-        <div class="status-badge">
-            Active
+            <div class="nav-right">
+                <span class="nav-avatar"><img src="ya.jfif" alt=""></span>
+                <a class="nav-mail" href="mailto:faiztugas152@gmail.com">
+                    <svg class="ni" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 3h12v8H1V3Zm1 1 5 4 5-4"/></svg>
+                    <span>Email</span>
+                </a>
+            </div>
         </div>
+    </header>
 
+    <!-- ================= RULER ================= -->
+    <div class="ruler" aria-hidden="true">
+        <div class="ruler-scale">
+            <span style="--n:0">0</span><span style="--n:1">100</span><span style="--n:2">200</span>
+            <span style="--n:3">300</span><span style="--n:4">400</span><span style="--n:5">500</span>
+            <span style="--n:6">600</span><span style="--n:7">700</span><span style="--n:8">800</span>
+            <span style="--n:9">900</span><span style="--n:10">1000</span><span style="--n:11">1100</span>
+            <span style="--n:12">1200</span><span style="--n:13">1300</span><span style="--n:14">1400</span>
+        </div>
     </div>
 
+    <main>
 
-    <div class="tag-container">
+        <!-- ================= PAGE HERO ================= -->
+        <section class="page-hero">
+            <div class="page-hero-inner">
 
-        <span class="tag">
-            #faiznnclhnt
-        </span>
+                <div class="page-hero-top">
+                    <span class="crumbs">
+                        Index <span>/</span> <b>Foto</b>
+                    </span>
+                    <span class="chip"><span class="dot"></span> Gallery / 21</span>
+                </div>
 
-        <span class="tag">
-            #petir
-        </span>
+                <div class="page-frame">
+                    <h1 class="page-title">Setiap Pixel.</h1>
+                </div>
 
-        <span class="tag">
-            #pencintabola
-        </span>
+                <div class="page-sub">
+                    <span class="hand">momen pilihan</span>
+                    <p style="margin:0">Kumpulan momen pilihan — mengabadikan momen, menciptakan kenangan.</p>
+                </div>
 
-    </div>
+                <div class="page-deco" aria-hidden="true">
+                    <div class="cursor">
+                        <svg viewBox="0 0 24 24"><path d="M5 3l14 8-6 1.6L10 19 5 3Z" fill="#e01e5a" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/></svg>
+                        <span>klik foto</span>
+                    </div>
+                    <div class="avatar-sticker">
+                        <img src="ya.jfif" alt="">
+                    </div>
+                </div>
 
+            </div>
+        </section>
 
-    <ul class="nav-menu">
+        <!-- ================= GALLERY ================= -->
+        <section class="gallery-wrap">
+            <div class="wrap">
 
-        <li>
-            <a href="index.html">
-                <span>✦</span>
-                Beranda
-            </a>
-        </li>
+                <div class="gallery">
 
-        <li>
-            <a href="profil.html">
-                <span>✦</span>
-                Profil
-            </a>
-        </li>
+                    <figure class="polaroid wide">
+                        <a class="ph" href="1.jfif" target="_blank" rel="noopener">
+                            <img src="1.jfif" alt="Foto profil utama" loading="lazy">
+                        </a>
+                        <figcaption>Profil Utama <em>#01</em></figcaption>
+                    </figure>
 
-        <li>
-            <a href="kegiatan.html">
-                <span>✦</span>
-                Kegiatan
-            </a>
-        </li>
+                    <figure class="polaroid">
+                        <a class="ph" href="2.jpg" target="_blank" rel="noopener">
+                            <img src="2.jpg" alt="Momen 02" loading="lazy">
+                        </a>
+                        <figcaption>Momen 02 <em>#02</em></figcaption>
+                    </figure>
 
-        <li>
-            <a href="foto.html">
-                <span>✦</span>
-                Foto-foto
-            </a>
-        </li>
+                    <figure class="polaroid">
+                        <a class="ph" href="3.jpg" target="_blank" rel="noopener">
+                            <img src="3.jpg" alt="Momen 03" loading="lazy">
+                        </a>
+                        <figcaption>Momen 03 <em>#03</em></figcaption>
+                    </figure>
 
-        <li>
-            <a href="puisi.html">
-                <span>✦</span>
-                Puisi Teman
-            </a>
-        </li>
+                    <figure class="polaroid">
+                        <a class="ph" href="4.jpg" target="_blank" rel="noopener">
+                            <img src="4.jpg" alt="Momen 04" loading="lazy">
+                        </a>
+                        <figcaption>Momen 04 <em>#04</em></figcaption>
+                    </figure>
 
-    </ul>
+                    <figure class="polaroid">
+                        <a class="ph" href="5.jpg" target="_blank" rel="noopener">
+                            <img src="5.jpg" alt="Momen 05" loading="lazy">
+                        </a>
+                        <figcaption>Momen 05 <em>#05</em></figcaption>
+                    </figure>
 
+                    <figure class="polaroid wide">
+                        <a class="ph" href="6.jpg" target="_blank" rel="noopener">
+                            <img src="6.jpg" alt="Momen 06" loading="lazy">
+                        </a>
+                        <figcaption>Momen 06 <em>#06</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="7.jpg" target="_blank" rel="noopener">
+                            <img src="7.jpg" alt="Momen 07" loading="lazy">
+                        </a>
+                        <figcaption>Momen 07 <em>#07</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="8.jpg" target="_blank" rel="noopener">
+                            <img src="8.jpg" alt="Momen 08" loading="lazy">
+                        </a>
+                        <figcaption>Momen 08 <em>#08</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="9.jpeg" target="_blank" rel="noopener">
+                            <img src="9.jpeg" alt="Momen 09" loading="lazy">
+                        </a>
+                        <figcaption>Momen 09 <em>#09</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="10.jpeg" target="_blank" rel="noopener">
+                            <img src="10.jpeg" alt="Momen 10" loading="lazy">
+                        </a>
+                        <figcaption>Momen 10 <em>#10</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="11.jpeg" target="_blank" rel="noopener">
+                            <img src="11.jpeg" alt="Momen 11" loading="lazy">
+                        </a>
+                        <figcaption>Momen 11 <em>#11</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="12.jpeg" target="_blank" rel="noopener">
+                            <img src="12.jpeg" alt="Momen 12" loading="lazy">
+                        </a>
+                        <figcaption>Momen 12 <em>#12</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="13.jpeg" target="_blank" rel="noopener">
+                            <img src="13.jpeg" alt="Momen 13" loading="lazy">
+                        </a>
+                        <figcaption>Momen 13 <em>#13</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="14.jpeg" target="_blank" rel="noopener">
+                            <img src="14.jpeg" alt="Momen 14" loading="lazy">
+                        </a>
+                        <figcaption>Momen 14 <em>#14</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="15.jpeg" target="_blank" rel="noopener">
+                            <img src="15.jpeg" alt="Momen 15" loading="lazy">
+                        </a>
+                        <figcaption>Momen 15 <em>#15</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="16.jpeg" target="_blank" rel="noopener">
+                            <img src="16.jpeg" alt="Momen 16" loading="lazy">
+                        </a>
+                        <figcaption>Momen 16 <em>#16</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="17.jpg" target="_blank" rel="noopener">
+                            <img src="17.jpg" alt="Momen 17" loading="lazy">
+                        </a>
+                        <figcaption>Momen 17 <em>#17</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="18.jpeg" target="_blank" rel="noopener">
+                            <img src="18.jpeg" alt="Momen 18" loading="lazy">
+                        </a>
+                        <figcaption>Momen 18 <em>#18</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="19.jfif" target="_blank" rel="noopener">
+                            <img src="19.jfif" alt="Momen 19" loading="lazy">
+                        </a>
+                        <figcaption>Momen 19 <em>#19</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid wide">
+                        <a class="ph" href="9.jfif" target="_blank" rel="noopener">
+                            <img src="9.jfif" alt="Momen 09 arsip" loading="lazy">
+                        </a>
+                        <figcaption>Momen 09 <em>#20</em></figcaption>
+                    </figure>
+
+                    <figure class="polaroid">
+                        <a class="ph" href="10.jfif" target="_blank" rel="noopener">
+                            <img src="10.jfif" alt="Momen 10 arsip" loading="lazy">
+                        </a>
+                        <figcaption>Momen 10 <em>#21</em></figcaption>
+                    </figure>
+
+                </div>
+
+                <div class="gallery-note">
+                    <p>21 foto · setiap momen · 2026</p>
+
+                    <div class="hero-actions">
+                        <a class="btn is-light" href="index.html">← Beranda</a>
+                        <a class="btn" href="hadist.html">Baca hadist ↗</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="site-footer">
+            <div class="wrap">
+
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <svg class="clover" viewBox="0 0 100 100" aria-hidden="true">
+                            <g fill="#2fbc81">
+                                <circle cx="35" cy="35" r="21"/>
+                                <circle cx="65" cy="35" r="21"/>
+                                <circle cx="35" cy="65" r="21"/>
+                                <circle cx="65" cy="65" r="21"/>
+                            </g>
+                            <circle cx="50" cy="50" r="16" fill="#fff"/>
+                            <path d="M43 39h15v5h-9v4h8v5h-8v8h-6V39Z" fill="#2fbc81"/>
+                        </svg>
+
+                        <div>
+                            <h2>Baca hadist.</h2>
+                            <p>Tiga hadist pilihan yang saya simpan sebagai pengingat — tentang perkataan, niat, dan manfaat.</p>
+                        </div>
+                    </div>
+
+                    <div class="comment-card">
+                        <span class="avatar"><img src="ya.jfif" alt=""></span>
+                        <div class="body">
+                            <div class="who">
+                                Pais NNCLHNT
+                                <time datetime="2026-11-13">baru saja</time>
+                            </div>
+                            <p>Foto boleh pudar, kenangannya jangan. Selamat melihat-lihat galeri.</p>
+                            <div class="reactions">
+                                <span>⚡ 1</span>
+                                <span>↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-banner">
+                    <div class="cta-copy">
+                        <span class="mono">Next / 05</span>
+                        <h2>Baca hadist.</h2>
+                        <p>Tiga pengingat singkat untuk diri sendiri.</p>
+                    </div>
+
+                    <a class="cta-contact" href="hadist.html">
+                        <span class="cta-tile">↗</span>
+                        <span>Hadist</span>
+                        <span class="cta-tile">↗</span>
+                    </a>
+                </div>
+
+                <div class="footer-bottom">
+                    <span>© 2026 · Pais NNCLHNT · Photo gallery</span>
+
+                    <nav aria-label="Navigasi footer">
+                        <a href="index.html">Beranda</a>
+                        <a href="profil.html">Profil</a>
+                        <a href="Kegiatan.html">Kegiatan</a>
+                        <a href="foto.html">Foto</a>
+                        <a href="hadist.html">Hadist</a>
+                    </nav>
+                </div>
+
+                <div class="ruler ruler-foot" aria-hidden="true">
+                    <div class="ruler-scale">
+                        <span style="--n:0">0</span><span style="--n:1">100</span><span style="--n:2">200</span>
+                        <span style="--n:3">300</span><span style="--n:4">400</span><span style="--n:5">500</span>
+                        <span style="--n:6">600</span><span style="--n:7">700</span><span style="--n:8">800</span>
+                        <span style="--n:9">900</span><span style="--n:10">1000</span><span style="--n:11">1100</span>
+                        <span style="--n:12">1200</span><span style="--n:13">1300</span><span style="--n:14">1400</span>
+                    </div>
+                </div>
 </div>
+        </footer>
 
+    </main>
 
-<!-- =====================================================
-     CONTENT
-===================================================== -->
+    <a class="site-badge" href="index.html">
+        <span class="mark">F</span>
+        Faiz NNCLHNT®
+    </a>
 
-<div class="content-section">
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
 
+        document.querySelectorAll('.rise').forEach((el) => observer.observe(el));
+    </script>
 
-    <h2>
-        GALERI FOTO
-    </h2>
-
-
-    <div class="subtitle">
-        Kumpulan Momen Pilihan
-    </div>
-
-
-    <div class="photo-grid">
-
-
-        <div class="photo-card">
-
-            <div class="photo-box">
-
-                <img
-                    src="ya.jfif"
-                    alt="Foto Profil Utama"
-                >
-
-            </div>
-
-            <div class="photo-caption">
-                #01 - Profil Utama
-            </div>
-
-        </div>
-
-
-        <div class="photo-card">
-
-            <div class="photo-box">
-
-                <img
-                    src="bal.jpg"
-                    alt="Foto Main Bola"
-                >
-
-            </div>
-
-            <div class="photo-caption">
-                #02 - Main Bola
-            </div>
-
-        </div>
-
-
-        <div class="photo-card">
-
-            <div class="photo-box">
-
-                <img
-                    src="petir.jfif"
-                    alt="Foto Suasana Petir"
-                >
-
-            </div>
-
-            <div class="photo-caption">
-                #03 - Suasana Petir
-            </div>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="divider"></div>
-
-
-    <div class="back-link">
-
-        <a href="index.html">
-            ← KEMBALI KE BERANDA
-        </a>
-
-    </div>
-
-
-    <div class="footer">
-
-        © 2026 • PAIS NNCLHNT • PHOTO GALLERY
-
-    </div>
-
-
-</div>
-
-
-</div>
-
+    <script src="effects.js"></script>
 
 </body>
 

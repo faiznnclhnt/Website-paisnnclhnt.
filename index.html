@@ -1,1851 +1,398 @@
-
 <!DOCTYPE html>
 <html lang="id">
 
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Faiz NNCLHNT // Beranda</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Fira+Code:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-
-/* =====================================================
-   GOLD LUXURY THEME
-===================================================== */
-
-:root {
-
-    --black: #050505;
-    --black-soft: #0b0b0b;
-    --card: rgba(15,15,15,.92);
-
-    --gold: #c59b27;
-    --gold-light: #f1d477;
-    --gold-bright: #ffe9a3;
-    --gold-dark: #806015;
-
-    --gold-glow: rgba(197,155,39,.45);
-
-    --white: #f8fafc;
-    --gray: #a1a1aa;
-    --dark-gray: #555;
-
-    --border: rgba(197,155,39,.25);
-}
-
-
-/* =====================================================
-   RESET
-===================================================== */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-/* =====================================================
-   BODY
-===================================================== */
-
-body {
-
-    min-height: 100vh;
-
-    padding: 35px 18px;
-
-    font-family: 'Plus Jakarta Sans', sans-serif;
-
-    color: var(--white);
-
-    overflow-x: hidden;
-
-    background:
-
-        radial-gradient(
-            circle at 15% 20%,
-            rgba(197,155,39,.14),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 85% 80%,
-            rgba(197,155,39,.11),
-            transparent 30%
-        ),
-
-        radial-gradient(
-            circle at 50% 50%,
-            rgba(197,155,39,.035),
-            transparent 50%
-        ),
-
-        linear-gradient(
-            135deg,
-            #030303,
-            #0c0c0c 50%,
-            #030303
-        );
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    position: relative;
-}
-
-
-/* =====================================================
-   AMBIENT GOLD LIGHT
-===================================================== */
-
-body::before {
-
-    content: "";
-
-    position: fixed;
-
-    width: 500px;
-    height: 500px;
-
-    left: -250px;
-    top: -250px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(197,155,39,.12),
-            transparent 70%
-        );
-
-    filter: blur(20px);
-
-    animation:
-        ambientMove 9s ease-in-out infinite alternate;
-
-    pointer-events: none;
-}
-
-
-body::after {
-
-    content: "";
-
-    position: fixed;
-
-    width: 450px;
-    height: 450px;
-
-    right: -220px;
-    bottom: -220px;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(197,155,39,.10),
-            transparent 70%
-        );
-
-    filter: blur(20px);
-
-    animation:
-        ambientMove2 11s ease-in-out infinite alternate;
-
-    pointer-events: none;
-}
-
-
-@keyframes ambientMove {
-
-    from {
-        transform: translate(0,0) scale(1);
-    }
-
-    to {
-        transform: translate(150px,100px) scale(1.25);
-    }
-
-}
-
-
-@keyframes ambientMove2 {
-
-    from {
-        transform: translate(0,0) scale(1);
-    }
-
-    to {
-        transform: translate(-120px,-100px) scale(1.3);
-    }
-
-}
-
-
-/* =====================================================
-   MAIN CONTAINER
-===================================================== */
-
-.container {
-
-    width: 100%;
-
-    max-width: 950px;
-
-    padding: 45px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(25,25,25,.94),
-            rgba(8,8,8,.96)
-        );
-
-    border:
-        1px solid var(--border);
-
-    border-radius: 30px;
-
-    position: relative;
-
-    overflow: hidden;
-
-    backdrop-filter: blur(20px);
-
-    -webkit-backdrop-filter: blur(20px);
-
-    box-shadow:
-
-        0 30px 80px rgba(0,0,0,.75),
-
-        0 0 50px rgba(197,155,39,.06),
-
-        inset 0 0 50px rgba(197,155,39,.025);
-
-    animation:
-        containerEnter 1s ease forwards;
-}
-
-
-@keyframes containerEnter {
-
-    from {
-        opacity: 0;
-        transform: translateY(30px) scale(.98);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-
-}
-
-
-/* =====================================================
-   GOLD TOP LINE
-===================================================== */
-
-.container::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: 260px;
-
-    height: 3px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            var(--gold-dark),
-            var(--gold-bright),
-            var(--gold),
-            transparent
-        );
-
-    box-shadow:
-
-        0 0 10px var(--gold-glow),
-        0 0 25px var(--gold-glow);
-
-    animation:
-        goldLine 3s ease-in-out infinite;
-}
-
-
-@keyframes goldLine {
-
-    0%,100% {
-        opacity: .5;
-        width: 180px;
-    }
-
-    50% {
-        opacity: 1;
-        width: 330px;
-    }
-
-}
-
-
-/* =====================================================
-   DECORATIVE LIGHT
-===================================================== */
-
-.container::after {
-
-    content: "";
-
-    position: absolute;
-
-    width: 260px;
-    height: 260px;
-
-    right: -140px;
-    top: -140px;
-
-    border-radius: 50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(197,155,39,.12),
-            transparent 70%
-        );
-
-    filter: blur(10px);
-
-    animation:
-        decorativeGlow 7s ease-in-out infinite alternate;
-
-    pointer-events: none;
-}
-
-
-@keyframes decorativeGlow {
-
-    from {
-        opacity: .35;
-        transform: scale(.8);
-    }
-
-    to {
-        opacity: .8;
-        transform: scale(1.3);
-    }
-
-}
-
-
-/* =====================================================
-   HEADER
-===================================================== */
-
-.header-section {
-
-    text-align: center;
-
-    padding-bottom: 28px;
-
-    margin-bottom: 32px;
-
-    border-bottom:
-        1px solid
-        rgba(197,155,39,.18);
-
-    position: relative;
-}
-
-
-/* =====================================================
-   PROFILE
-===================================================== */
-
-.profile-wrapper {
-
-    position: relative;
-
-    width: 130px;
-    height: 130px;
-
-    margin: 0 auto 20px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-}
-
-
-/* GOLD ROTATING RING */
-
-.profile-wrapper::before {
-
-    content: "";
-
-    position: absolute;
-
-    width: 130px;
-    height: 130px;
-
-    border-radius: 50%;
-
-    border:
-        2px solid transparent;
-
-    border-top-color:
-        var(--gold-light);
-
-    border-right-color:
-        var(--gold);
-
-    box-shadow:
-        0 0 18px rgba(197,155,39,.25);
-
-    animation:
-        rotateRing 5s linear infinite;
-}
-
-
-@keyframes rotateRing {
-
-    to {
-        transform: rotate(360deg);
-    }
-
-}
-
-
-.profile-img {
-
-    width: 112px;
-    height: 112px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border:
-        2px solid var(--gold);
-
-    padding: 3px;
-
-    background: #050505;
-
-    filter:
-        grayscale(100%)
-        contrast(110%);
-
-    transition:
-        .5s ease;
-
-    position: relative;
-
-    z-index: 2;
-
-    box-shadow:
-
-        0 0 0 5px rgba(197,155,39,.04),
-
-        0 10px 35px rgba(0,0,0,.7);
-}
-
-
-.profile-img:hover {
-
-    filter:
-        grayscale(0%)
-        brightness(1.05);
-
-    transform:
-        scale(1.08);
-
-    border-color:
-        var(--gold-bright);
-
-    box-shadow:
-
-        0 0 20px rgba(197,155,39,.5),
-
-        0 0 50px rgba(197,155,39,.18);
-}
-
-
-/* =====================================================
-   STATUS
-===================================================== */
-
-.status-badge {
-
-    position: absolute;
-
-    right: 0;
-    bottom: 3px;
-
-    z-index: 5;
-
-    padding:
-        4px 9px;
-
-    color:
-        var(--gold-bright);
-
-    background:
-        #080808;
-
-    border:
-        1px solid
-        var(--gold);
-
-    border-radius:
-        20px;
-
-    font-family:
-        'Fira Code',
-        monospace;
-
-    font-size:
-        9px;
-
-    box-shadow:
-        0 0 12px rgba(197,155,39,.2);
-}
-
-
-.status-badge::before {
-
-    content: "●";
-
-    margin-right: 5px;
-
-    color:
-        var(--gold-light);
-
-    animation:
-        statusPulse 1.5s infinite;
-}
-
-
-@keyframes statusPulse {
-
-    50% {
-        opacity: .3;
-    }
-
-}
-
-
-/* =====================================================
-   SITE NAME
-===================================================== */
-
-.site-name {
-
-    color:
-        var(--gold-light);
-
-    font-family:
-        'Cinzel',
-        serif;
-
-    font-size:
-        2rem;
-
-    font-weight:
-        800;
-
-    letter-spacing:
-        4px;
-
-    margin-bottom:
-        7px;
-
-    text-shadow:
-
-        0 0 15px rgba(197,155,39,.12),
-
-        0 0 35px rgba(197,155,39,.08);
-
-    animation:
-        titleGlow 3s ease-in-out infinite alternate;
-}
-
-
-@keyframes titleGlow {
-
-    from {
-        text-shadow:
-            0 0 10px rgba(197,155,39,.08);
-    }
-
-    to {
-        text-shadow:
-            0 0 25px rgba(197,155,39,.25);
-    }
-
-}
-
-
-.site-description {
-
-    color:
-        #858585;
-
-    font-size:
-        .75rem;
-
-    letter-spacing:
-        3px;
-
-    text-transform:
-        uppercase;
-}
-
-
-/* =====================================================
-   TAG
-===================================================== */
-
-.tag-container {
-
-    display:
-        flex;
-
-    justify-content:
-        center;
-
-    flex-wrap:
-        wrap;
-
-    gap:
-        8px;
-
-    margin:
-        20px 0;
-}
-
-
-.tag {
-
-    padding:
-        6px 12px;
-
-    color:
-        var(--gold-light);
-
-    background:
-        rgba(197,155,39,.045);
-
-    border:
-        1px solid
-        rgba(197,155,39,.22);
-
-    border-radius:
-        20px;
-
-    font-family:
-        'Fira Code',
-        monospace;
-
-    font-size:
-        10px;
-
-    transition:
-        .35s ease;
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-}
-
-
-.tag::before {
-
-    content: "";
-
-    position:
-        absolute;
-
-    left:
-        -100%;
-
-    top:
-        0;
-
-    width:
-        100%;
-
-    height:
-        100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,230,150,.15),
-            transparent
-        );
-
-    transition:
-        .6s;
-}
-
-
-.tag:hover::before {
-    left: 100%;
-}
-
-
-.tag:hover {
-
-    color:
-        #fff;
-
-    border-color:
-        var(--gold);
-
-    background:
-        rgba(197,155,39,.12);
-
-    box-shadow:
-        0 0 15px rgba(197,155,39,.15);
-
-    transform:
-        translateY(-3px);
-}
-
-
-/* =====================================================
-   NAVIGATION
-===================================================== */
-
-.nav-menu {
-
-    display:
-        flex;
-
-    flex-wrap:
-        wrap;
-
-    justify-content:
-        center;
-
-    gap:
-        9px;
-
-    list-style:
-        none;
-
-    margin-top:
-        22px;
-}
-
-
-.nav-menu a {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        7px;
-
-    padding:
-        9px 15px;
-
-    color:
-        #b8b8b8;
-
-    background:
-        rgba(255,255,255,.018);
-
-    border:
-        1px solid
-        rgba(255,255,255,.07);
-
-    border-radius:
-        30px;
-
-    text-decoration:
-        none;
-
-    font-size:
-        .76rem;
-
-    font-weight:
-        600;
-
-    transition:
-        .35s ease;
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-}
-
-
-.nav-menu a::before {
-
-    content: "";
-
-    position:
-        absolute;
-
-    left:
-        -100%;
-
-    top:
-        0;
-
-    width:
-        100%;
-
-    height:
-        100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(197,155,39,.13),
-            transparent
-        );
-
-    transition:
-        .6s;
-}
-
-
-.nav-menu a:hover::before {
-    left: 100%;
-}
-
-
-.nav-menu a span {
-
-    color:
-        var(--gold);
-
-    transition:
-        .3s;
-}
-
-
-.nav-menu a:hover {
-
-    color:
-        var(--gold-bright);
-
-    border-color:
-        rgba(197,155,39,.45);
-
-    background:
-        rgba(197,155,39,.07);
-
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-
-        0 8px 25px rgba(0,0,0,.4),
-
-        0 0 15px rgba(197,155,39,.08);
-}
-
-
-.nav-menu a:hover span {
-
-    text-shadow:
-        0 0 10px var(--gold);
-
-    transform:
-        rotate(90deg);
-}
-
-
-/* =====================================================
-   CONTENT
-===================================================== */
-
-.content-section {
-
-    max-width:
-        750px;
-
-    margin:
-        auto;
-
-    animation:
-        contentAppear 1s ease .3s both;
-}
-
-
-@keyframes contentAppear {
-
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-
-h2 {
-
-    font-family:
-        'Cinzel',
-        serif;
-
-    text-align:
-        center;
-
-    color:
-        var(--gold-light);
-
-    font-size:
-        1.45rem;
-
-    letter-spacing:
-        3px;
-
-    margin-bottom:
-        25px;
-
-    text-shadow:
-        0 0 20px rgba(197,155,39,.15);
-}
-
-
-/* =====================================================
-   WELCOME BANNER
-===================================================== */
-
-.welcome-banner {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        15px;
-
-    padding:
-        18px 20px;
-
-    margin-bottom:
-        25px;
-
-    border-radius:
-        16px;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(197,155,39,.10),
-            rgba(197,155,39,.025)
-        );
-
-    border:
-        1px solid
-        rgba(197,155,39,.25);
-
-    box-shadow:
-
-        0 10px 30px rgba(0,0,0,.3),
-
-        inset 0 0 25px
-        rgba(197,155,39,.025);
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-
-    transition:
-        .4s ease;
-}
-
-
-.welcome-banner::before {
-
-    content: "";
-
-    position:
-        absolute;
-
-    left:
-        -100%;
-
-    top:
-        0;
-
-    width:
-        70%;
-
-    height:
-        100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,230,150,.08),
-            transparent
-        );
-
-    transform:
-        skewX(-20deg);
-
-    transition:
-        .8s;
-}
-
-
-.welcome-banner:hover::before {
-    left: 130%;
-}
-
-
-.welcome-banner:hover {
-
-    border-color:
-        rgba(197,155,39,.45);
-
-    transform:
-        translateY(-3px);
-
-    box-shadow:
-
-        0 15px 35px rgba(0,0,0,.4),
-
-        0 0 20px rgba(197,155,39,.08);
-}
-
-
-.welcome-icon {
-
-    width:
-        44px;
-
-    height:
-        44px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    flex-shrink:
-        0;
-
-    border-radius:
-        50%;
-
-    color:
-        var(--gold-light);
-
-    background:
-        rgba(197,155,39,.08);
-
-    border:
-        1px solid
-        rgba(197,155,39,.3);
-
-    font-size:
-        1.15rem;
-
-    box-shadow:
-        0 0 15px rgba(197,155,39,.08);
-
-    animation:
-        iconPulse 2.5s ease-in-out infinite;
-}
-
-
-@keyframes iconPulse {
-
-    50% {
-        box-shadow:
-            0 0 25px rgba(197,155,39,.22);
-    }
-
-}
-
-
-.welcome-text {
-
-    color:
-        #c3c3c3;
-
-    font-size:
-        .9rem;
-
-    line-height:
-        1.6;
-}
-
-
-.welcome-text b {
-
-    color:
-        var(--gold-light);
-
-    font-weight:
-        700;
-}
-
-
-/* =====================================================
-   INTRO
-===================================================== */
-
-.intro {
-
-    color:
-        #929292;
-
-    font-size:
-        .92rem;
-
-    line-height:
-        1.9;
-
-    text-align:
-        justify;
-
-    padding:
-        0 5px;
-}
-
-
-/* =====================================================
-   DIVIDER
-===================================================== */
-
-.divider {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        15px;
-
-    margin:
-        30px 0;
-}
-
-
-.divider::before,
-.divider::after {
-
-    content:
-        "";
-
-    height:
-        1px;
-
-    flex:
-        1;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(197,155,39,.35)
-        );
-}
-
-
-.divider::after {
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(197,155,39,.35),
-            transparent
-        );
-}
-
-
-.divider span {
-
-    color:
-        var(--gold);
-
-    font-size:
-        .75rem;
-
-    font-family:
-        'Fira Code',
-        monospace;
-
-    text-shadow:
-        0 0 12px rgba(197,155,39,.3);
-}
-
-
-/* =====================================================
-   POEM TITLE
-===================================================== */
-
-.poem-title {
-
-    color:
-        var(--gold-light);
-
-    font-family:
-        'Cinzel',
-        serif;
-
-    font-size:
-        1.1rem;
-
-    letter-spacing:
-        2px;
-
-    margin-bottom:
-        15px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        10px;
-}
-
-
-.poem-title span {
-
-    color:
-        var(--gold);
-
-    font-family:
-        'Fira Code',
-        monospace;
-
-    font-size:
-        .8rem;
-
-    text-shadow:
-        0 0 10px var(--gold);
-}
-
-
-/* =====================================================
-   POEM CARD
-===================================================== */
-
-.poem {
-
-    position:
-        relative;
-
-    padding:
-        28px 28px 28px 30px;
-
-    border-radius:
-        0 18px 18px 0;
-
-    border-left:
-        3px solid var(--gold);
-
-    border-top:
-        1px solid
-        rgba(197,155,39,.14);
-
-    border-right:
-        1px solid
-        rgba(197,155,39,.08);
-
-    border-bottom:
-        1px solid
-        rgba(197,155,39,.08);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(197,155,39,.065),
-            rgba(255,255,255,.012)
-        );
-
-    color:
-        #aeb0b5;
-
-    font-size:
-        .92rem;
-
-    line-height:
-        2;
-
-    font-style:
-        italic;
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,.3);
-
-    transition:
-        .45s ease;
-
-    overflow:
-        hidden;
-}
-
-
-.poem::after {
-
-    content: "";
-
-    position:
-        absolute;
-
-    top:
-        -100%;
-
-    left:
-        -60%;
-
-    width:
-        40%;
-
-    height:
-        300%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255,230,150,.07),
-            transparent
-        );
-
-    transform:
-        rotate(25deg);
-
-    transition:
-        .9s;
-
-    pointer-events:
-        none;
-}
-
-
-.poem:hover::after {
-
-    left:
-        130%;
-}
-
-
-.poem:hover {
-
-    transform:
-        translateX(5px);
-
-    border-left-color:
-        var(--gold-light);
-
-    box-shadow:
-
-        0 15px 40px rgba(0,0,0,.45),
-
-        -5px 0 25px
-        rgba(197,155,39,.08);
-}
-
-
-.poem::before {
-
-    content:
-        "“";
-
-    position:
-        absolute;
-
-    top:
-        -20px;
-
-    right:
-        25px;
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:
-        6rem;
-
-    color:
-        rgba(197,155,39,.08);
-
-    line-height:
-        1;
-}
-
-
-.poem strong {
-
-    color:
-        var(--gold-light);
-
-    font-style:
-        normal;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-.footer {
-
-    text-align:
-        center;
-
-    margin-top:
-        35px;
-
-    padding-top:
-        20px;
-
-    border-top:
-        1px solid
-        rgba(197,155,39,.10);
-
-    color:
-        #4d4d4d;
-
-    font-family:
-        'Fira Code',
-        monospace;
-
-    font-size:
-        .65rem;
-
-    letter-spacing:
-        1px;
-}
-
-
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media (max-width:768px) {
-
-    body {
-        padding:
-            20px 12px;
-    }
-
-    .container {
-        padding:
-            30px 18px;
-
-        border-radius:
-            22px;
-    }
-
-    .profile-wrapper {
-        width:
-            120px;
-
-        height:
-            120px;
-    }
-
-    .profile-wrapper::before {
-        width:
-            120px;
-
-        height:
-            120px;
-    }
-
-    .profile-img {
-        width:
-            104px;
-
-        height:
-            104px;
-    }
-
-    .site-name {
-        font-size:
-            1.4rem;
-
-        letter-spacing:
-            3px;
-    }
-
-    .site-description {
-        font-size:
-            .65rem;
-
-        letter-spacing:
-            2px;
-    }
-
-    .nav-menu {
-        gap:
-            7px;
-    }
-
-    .nav-menu a {
-        font-size:
-            .7rem;
-
-        padding:
-            7px 10px;
-    }
-
-    h2 {
-        font-size:
-            1.05rem;
-
-        line-height:
-            1.7;
-    }
-
-    .intro {
-        font-size:
-            .84rem;
-
-        text-align:
-            left;
-    }
-
-    .poem {
-        padding:
-            22px 20px;
-
-        font-size:
-            .83rem;
-
-        line-height:
-            1.9;
-    }
-
-    .welcome-banner {
-        padding:
-            14px;
-    }
-
-    .welcome-text {
-        font-size:
-            .8rem;
-    }
-
-}
-
-
-/* =====================================================
-   SMALL PHONE
-===================================================== */
-
-@media (max-width:400px) {
-
-    .container {
-        padding:
-            25px 14px;
-    }
-
-    .site-name {
-        font-size:
-            1.2rem;
-
-        letter-spacing:
-            2px;
-    }
-
-    .tag {
-        font-size:
-            9px;
-
-        padding:
-            5px 9px;
-    }
-
-    .nav-menu a {
-        padding:
-            6px 8px;
-
-        font-size:
-            9px;
-    }
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Faiz NNCLHNT // Beranda</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600;700&family=Just+Me+Again+Down+Here&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="assets/fonts/flux-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/fonts/inter-display-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+    <!-- ================= NAV ================= -->
+    <header class="nav">
+        <div class="nav-inner">
+            <a class="brand" href="index.html" aria-label="Faiz NNCLHNT">
+                <span class="brand-mark">F</span>
+                <span class="brand-name">Faiz<sup>®</sup></span>
+            </a>
 
-<div class="container">
+            <nav class="nav-links" aria-label="Navigasi utama">
+                <a class="is-active" href="index.html">
+                    <svg class="ni" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 6 7 1l6 5v7H9V9H5v4H1V6Z"/></svg>
+                    <span>Beranda</span>
+                </a>
+                <a href="profil.html">
+                    <svg class="ni" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1a3 3 0 1 1 0 6 3 3 0 0 1 0-6ZM2 9h10v4H2V9Z"/></svg>
+                    <span>Profil</span>
+                </a>
+                <a href="Kegiatan.html">
+                    <svg class="ni" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 3h5l1 2h6v8H1V3Z"/></svg>
+                    <span>Kegiatan</span>
+                </a>
+                <a href="foto.html">
+                    <svg class="ni" viewBox="0 0 14 14" aria-hidden="true"><path fill-rule="evenodd" d="M1 4h3.1L5.5 2h3l1.4 2H13v8H1V4Zm6 1.4a2.6 2.6 0 1 0 0 5.2 2.6 2.6 0 0 0 0-5.2Z"/></svg>
+                    <span>Foto</span>
+                </a>
+                <a href="hadist.html">
+                    <svg class="ni" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 2.2c1.9-.7 3.8-.5 5.3.6v9.4C4.8 11 2.9 10.8 1 11.6V2.2Zm12 0c-1.9-.7-3.8-.5-5.3.6v9.4c1.5-1.2 3.4-1.4 5.3-.6V2.2Z"/></svg>
+                    <span>Hadist</span>
+                </a>
+            </nav>
 
+            <div class="nav-right">
+                <span class="nav-avatar"><img src="ya.jfif" alt=""></span>
+                <a class="nav-mail" href="mailto:faiztugas152@gmail.com">
+                    <svg class="ni" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 3h12v8H1V3Zm1 1 5 4 5-4"/></svg>
+                    <span>Email</span>
+                </a>
+            </div>
+        </div>
+    </header>
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+    <!-- ================= RULER ================= -->
+    <div class="ruler" aria-hidden="true">
+        <div class="ruler-scale">
+            <span style="--n:0">0</span><span style="--n:1">100</span><span style="--n:2">200</span>
+            <span style="--n:3">300</span><span style="--n:4">400</span><span style="--n:5">500</span>
+            <span style="--n:6">600</span><span style="--n:7">700</span><span style="--n:8">800</span>
+            <span style="--n:9">900</span><span style="--n:10">1000</span><span style="--n:11">1100</span>
+            <span style="--n:12">1200</span><span style="--n:13">1300</span><span style="--n:14">1400</span>
+        </div>
+    </div>
 
-<div class="header-section">
+    <main>
 
+        <!-- ================= HERO ================= -->
+        <section class="hero">
+            <div class="hero-inner">
 
-    <!-- FOTO PROFIL -->
+                <p class="hero-time"><span class="clock" id="clock">PETIR, ID — 00:00:00</span></p>
 
-    <div class="profile-wrapper">
+                <div class="hero-stage">
 
-        <img
-            class="profile-img"
-            src="ya.jfif"
-            alt="Foto Profil Faiz NNCLHNT"
-        >
+                    <div class="note note-a">
+                        <b>AHLAN WA SAHLAN !!!</b>
+                        Status aktif — silakan jelajahi profil, kegiatan, foto, dan hadist.
+                    </div>
 
-        <div class="status-badge">
-            Active
+                    <div class="note note-b">
+                        <b>Jelajahi</b>
+                        Profil · kegiatan · foto · hadist.
+                    </div>
+
+                    <div class="avatar-sticker one">
+                        <img src="ya.jfif" alt="Foto Faiz NNCLHNT">
+                    </div>
+
+                    <div class="avatar-sticker two">
+                        <img src="ya.jfif" alt="">
+                    </div>
+
+                    <div class="sticker-note loc">
+                        <span>Petir, ID</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 8-6 1.6L10 19 5 3Z" fill="#e01e5a" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/></svg>
+                    </div>
+
+                    <div class="sticker-note role">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 8-6 1.6L10 19 5 3Z" fill="#ecb22e" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/></svg>
+                        <span>Personal website · 2026</span>
+                    </div>
+
+                    <div class="hand-wrap">
+                        <span class="hand">Hi, saya</span>
+                        <svg class="scribble" viewBox="0 0 120 14" aria-hidden="true">
+                            <path d="M4 5c22-4 62-5 112-2M10 10c30-3 66-3 98-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+
+                    <div class="name-frame">
+                        <i class="hnd h1"></i><i class="hnd h2"></i><i class="hnd h3"></i><i class="hnd h4"></i>
+                        <h1 class="hero-name">Faiz NNCLHNT<span class="reg">®</span></h1>
+                    </div>
+
+                    <p class="avail"><span class="dot"></span>#faiznnclhnt · #gtgtbgt · #idk</p>
+
+                </div>
+
+                <p class="hero-note">
+                    Personal website · pais · nnclhnt. Terima kasih telah memasuki web saya — di sini Anda dapat memantau data profil serta rekam jejak aktivitas yang saya jalankan.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="contact-btn" href="mailto:faiztugas152@gmail.com">
+                        <span class="arrow-tile">↗</span>
+                        <span>Contact me</span>
+                    </a>
+                </div>
+
+                <div class="cursor i2" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M5 3l14 8-6 1.6L10 19 5 3Z" fill="#111212" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/></svg>
+                    <span>scroll</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= TICKER ================= -->
+        <div class="ticker" aria-hidden="true">
+            <div class="ticker-track">
+                <span>Faiz NNCLHNT <i>✦</i> Personal Website <i>✦</i> Puisi <i>✦</i> Hadist <i>✦</i> Foto <i>✦</i></span>
+                <span>Faiz NNCLHNT <i>✦</i> Personal Website <i>✦</i> Puisi <i>✦</i> Hadist <i>✦</i> Foto <i>✦</i></span>
+            </div>
         </div>
 
-    </div>
-
-
-    <!-- NAMA -->
-
-    <div class="site-name">
-        FAIZ NNCLHNT
-    </div>
-
-
-    <div class="site-description">
-        Personal Website • pais • nnclhnt
-    </div>
-
-
-    <!-- TAG -->
-
-    <div class="tag-container">
-
-        <span class="tag">
-            #faiznnclhnt
-        </span>
-
-        <span class="tag">
-            #gtgtbgt
-        </span>
-
-        <span class="tag">
-            #idk
-        </span>
-
-    </div>
-
-
-    <!-- NAVIGASI -->
-
-    <ul class="nav-menu">
-
-        <li>
-            <a href="index.html">
-                <span>✦</span>
-                Beranda
-            </a>
-        </li>
-
-        <li>
-            <a href="profil.html">
-                <span>✦</span>
-                Profil
-            </a>
-        </li>
-
-        <li>
-            <a href="kegiatan.html">
-                <span>✦</span>
-                Kegiatan
-            </a>
-        </li>
-
-        <li>
-            <a href="foto.html">
-                <span>✦</span>
-                Foto-foto
-            </a>
-        </li>
-
-        <li>
-            <a href="hadist.html">
-                <span>✦</span>
-                Hadist
-            </a>
-        </li>
-
-        <li>
-            <a href="mailto:faiztugas152@gmail.com">
-                <span>✦</span>
-                Email
-            </a>
-        </li>
-
-    </ul>
-
-</div>
-
-
-<!-- =====================================================
-     CONTENT
-===================================================== -->
-
-<div class="content-section">
-
-
-    <h2>
-        SELAMAT DATANG DI WILAYAH FAIS
-    </h2>
-
-
-    <!-- WELCOME -->
-
-    <div class="welcome-banner">
-
-        <div class="welcome-icon">
-            ✨
-        </div>
-
-        <div class="welcome-text">
-
-            <b>Status Aktif</b><br>
-
-            AHLAN WA SAHLAN !!!
-
-        </div>
-
-    </div>
-
-
-    <!-- DESCRIPTION -->
-
-    <p class="intro">
-
-        Terima kasih telah memasuki web saya.
-        Di sini Anda dapat memantau data profil
-        serta rekam jejak aktivitas yang saya jalankan.
-        Di bawah ini adalah arsip puisi yang saya susun
-        saat menatap kepekatan langit malam.
-
-    </p>
-
-
-    <!-- DIVIDER -->
-
-    <div class="divider">
-
-        <span>✦ ✦ ✦</span>
-
-    </div>
-
-
-    <!-- POEM -->
-
-    <div class="poem-title">
-
-        <span>//</span>
-
-        Aku dan Tuhanku
-
-    </div>
-
-
-    <div class="poem">
-
-        Ketika aku memandang langit<br>
-
-        aku bertanya pada diriku<br>
-
-        aku...<br>
-        <br>
-
-        siapakah aku sebenarnya?<br>
-
-        from manakah aku berasal?<br>
-
-        jauhkah aku dari tuhan-ku?<br>
-
-        aku...<br>
-        <br>
-
-        Tuhan...<br>
-
-        betapa mutlak kuasa-Mu<br>
-
-        menciptakan semesta raya<br>
-
-        untuk menghidupi mereka<br>
-
-        seperti aku<br>
-
-        <br>
-
-        apakah aku sudah mengabdi?<br>
-
-        hanya aku dan Engkau yang mengerti...
-
-    </div>
-
-
-    <!-- FOOTER -->
-
-    <div class="footer">
-
-        © 2026 • FAIZ NNCLHNT • PERSONAL WEBSITE
-
-    </div>
-
-
-</div>
-
-
-</div>
-
+        <!-- ================= ABOUT ================= -->
+        <section class="about">
+            <div class="wrap">
+
+                <svg class="about-arc" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M0 180C250 100 470 60 720 55c270-5 470 40 720 130" fill="none" stroke="#c9c9c9" stroke-width="1.5"/>
+                </svg>
+
+                <h2 class="hand about-hand">tentang saya!</h2>
+
+                <div class="select-label"><span>Sekilas · 02</span></div>
+
+                <p class="about-statement">
+                    Bukan sekadar halaman profil — ini <span class="mark cyan">arsip kecil</span> tentang siapa saya,
+                    apa yang saya kerjakan, dan apa yang saya pikirkan.
+                    <span class="inline-photo"><img src="ya.jfif" alt=""></span>
+                    <strong>Terima kasih sudah mampir.</strong>
+                </p>
+
+                <div class="skills-row">
+                    <div class="skill-card sc-mustard">
+                        <div class="sc-top"><h3>01 / Intro</h3><span class="sc-ico">▦</span></div>
+                        <p>Di sini Anda dapat memantau data profil serta rekam jejak aktivitas yang saya jalankan.</p>
+                        <em>Halo</em>
+                    </div>
+                    <div class="skill-card sc-green">
+                        <div class="sc-top"><h3>02 / Puisi</h3><span class="sc-ico">✳</span></div>
+                        <p>Puisi yang saya susun saat menatap kepekatan langit malam, ditulis pelan-pelan dan disimpan di halaman ini.</p>
+                        <em>Arsip</em>
+                    </div>
+                    <div class="skill-card sc-cyan">
+                        <div class="sc-top"><h3>03 / Jejak</h3><span class="sc-ico">▮</span></div>
+                        <p>Kegiatan, foto, dan hadist pilihan yang saya kumpulkan di satu tempat agar mudah dilihat kembali.</p>
+                        <em>Momen</em>
+                    </div>
+                </div>
+
+                <div class="about-sign">
+                    <span class="hand">— Faiz NNCLHNT</span>
+                    <span class="rule"></span>
+                    <span class="mono">PERSONAL SITE / 2026</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= SHOWCASE ================= -->
+        <section class="showcase">
+            <div class="wrap">
+
+                <span class="eyebrow center">Arsip · 03</span>
+                <h2 class="hand section-hand">lihat arsip!</h2>
+                <h2 class="display-title">Jejak.</h2>
+                <div class="section-meta">
+                    <span>Profil / Kegiatan / Foto</span>
+                    <span>2026 — 2027</span>
+                </div>
+
+                <div class="projects">
+
+                    <article class="pcard pcard-cyan">
+                        <div class="pcard-tab"><span class="tab-ico">▮</span> PROJECT 01</div>
+                        <div class="pcard-grid">
+                            <div class="pcard-copy">
+                                <span class="pcard-date">PROFILE.FIG · CV.PDF · 2026</span>
+                                <h3>Profil &amp; catatan diri</h3>
+                                <p>Nama, tempat lahir, agama, golongan darah, pekerjaan, dan hobi — semua data profil saya di satu halaman.</p>
+                                <div class="pcard-tags"><span>Nama</span><span>TTL</span><span>Hobi</span></div>
+                                <a class="pcard-link" href="profil.html">Buka profil <span>↗</span></a>
+                            </div>
+                            <figure class="pcard-media">
+                                <i class="hnd h1"></i><i class="hnd h2"></i><i class="hnd h3"></i><i class="hnd h4"></i>
+                                <span class="media-label">PORTRAIT.JPG</span>
+                                <img src="ya.jfif" alt="Potret Pais NNCLHNT">
+                                <figcaption><span>Pais NNCLHNT</span><span>Petir, ID</span></figcaption>
+                            </figure>
+                        </div>
+                    </article>
+
+                    <article class="pcard pcard-black">
+                        <div class="pcard-tab"><span class="tab-ico">▮</span> PROJECT 02</div>
+                        <div class="pcard-grid">
+                            <div class="pcard-copy">
+                                <span class="pcard-date">JOURNAL.FIG · TRIP.LOG · 2027</span>
+                                <h3>Kegiatan awal tahun</h3>
+                                <p>Umrah bersama teman-teman pondok pesantren, berangkat dengan pesawat pribadi menuju Makkah dan Madinah.</p>
+                                <div class="pcard-tags"><span>Umrah</span><span>Teman</span><span>2027</span></div>
+                                <a class="pcard-link" href="Kegiatan.html">Lihat kegiatan <span>↗</span></a>
+                            </div>
+                            <figure class="pcard-media">
+                                <i class="hnd h1"></i><i class="hnd h2"></i><i class="hnd h3"></i><i class="hnd h4"></i>
+                                <span class="media-label">UMRAH.JPG</span>
+                                <img src="umrah.jfif" alt="Kegiatan awal tahun di Makkah dan Madinah">
+                                <figcaption><span>Kegiatan awal tahun</span><span>Makkah — Madinah</span></figcaption>
+                            </figure>
+                        </div>
+                    </article>
+
+                    <article class="pcard pcard-mustard">
+                        <div class="pcard-tab"><span class="tab-ico">▮</span> PROJECT 03</div>
+                        <div class="pcard-grid">
+                            <div class="pcard-copy">
+                                <span class="pcard-date">GALLERY.FIG · 21 SHOTS · 2026</span>
+                                <h3>Setiap pixel, satu momen</h3>
+                                <p>Dua puluh satu foto yang saya simpan sebagai kenangan — dari kegiatan, perjalanan, sampai momen kecil sehari-hari.</p>
+                                <div class="pcard-tags"><span>Galeri</span><span>Polaroid</span><span>21</span></div>
+                                <a class="pcard-link" href="foto.html">Buka galeri <span>↗</span></a>
+                            </div>
+                            <figure class="pcard-media">
+                                <i class="hnd h1"></i><i class="hnd h2"></i><i class="hnd h3"></i><i class="hnd h4"></i>
+                                <span class="media-label">MOMEN.JPG</span>
+                                <img src="5.jpg" alt="Kumpulan momen dalam galeri foto">
+                                <figcaption><span>Setiap pixel</span><span>21 foto</span></figcaption>
+                            </figure>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= POEM ================= -->
+        <section class="poem-wrap">
+            <div class="wrap">
+
+                <span class="eyebrow center">Arsip puisi · 04</span>
+                <h2 class="hand section-hand">dibaca pelan-pelan</h2>
+                <h2 class="display-title">Aku dan Tuhanku.</h2>
+
+                <div class="poem-note hand">Puisi / Renungan / 2026</div>
+
+                <div class="poem-lines">
+                    <p>Ketika aku memandang langit<br>aku bertanya pada diriku<br>aku...</p>
+                    <p>siapakah aku sebenarnya?<br>from manakah aku berasal?<br>jauhkah aku dari tuhan-ku?<br>aku...</p>
+                    <p>Tuhan...<br>betapa mutlak kuasa-Mu<br>menciptakan semesta raya<br>untuk menghidupi mereka<br>seperti aku</p>
+                    <p>apakah aku sudah mengabdi?<br>hanya aku dan Engkau yang mengerti...</p>
+                </div>
+
+                <div class="poem-foot">
+                    <span class="hand">— Faiz NNCLHNT</span>
+                    <span class="mono">04 bait / 2026</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="site-footer">
+            <div class="wrap">
+
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <svg class="clover" viewBox="0 0 100 100" aria-hidden="true">
+                            <g fill="#2fbc81">
+                                <circle cx="35" cy="35" r="21"/>
+                                <circle cx="65" cy="35" r="21"/>
+                                <circle cx="35" cy="65" r="21"/>
+                                <circle cx="65" cy="65" r="21"/>
+                            </g>
+                            <circle cx="50" cy="50" r="16" fill="#fff"/>
+                            <path d="M43 39h15v5h-9v4h8v5h-8v8h-6V39Z" fill="#2fbc81"/>
+                        </svg>
+
+                        <div>
+                            <h2 class="display-title">Mari terhubung.</h2>
+                            <p>Ada pertanyaan, kolaborasi, atau sekadar ingin menyapa? Kirim pesan lewat email — saya akan membaca.</p>
+                        </div>
+                    </div>
+
+                    <div class="comment-card">
+                        <span class="avatar"><img src="ya.jfif" alt=""></span>
+                        <div class="body">
+                            <div class="who">
+                                Faiz NNCLHNT
+                                <time datetime="2026-11-13">baru saja</time>
+                            </div>
+                            <p>Terima kasih telah memasuki web saya. Silakan jelajahi profil, kegiatan, foto, dan hadist.</p>
+                            <div class="reactions">
+                                <span>⚡ 1</span>
+                                <span>↗</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-banner">
+                    <div class="cta-copy">
+                        <span class="mono">Get in touch / 2026</span>
+                        <p>faiztugas152@gmail.com</p>
+                    </div>
+
+                    <a class="cta-contact" href="mailto:faiztugas152@gmail.com">
+                        <span class="cta-tile">↗</span>
+                        <span>Contact</span>
+                        <span class="cta-tile">↗</span>
+                    </a>
+                </div>
+
+                <div class="footer-bottom">
+                    <span>© 2026 · Faiz NNCLHNT · Personal website</span>
+
+                    <nav aria-label="Navigasi footer">
+                        <a href="index.html">Beranda</a>
+                        <a href="profil.html">Profil</a>
+                        <a href="Kegiatan.html">Kegiatan</a>
+                        <a href="foto.html">Foto</a>
+                        <a href="hadist.html">Hadist</a>
+                    </nav>
+                </div>
+
+                <div class="ruler ruler-foot" aria-hidden="true">
+                    <div class="ruler-scale">
+                        <span style="--n:0">0</span><span style="--n:1">100</span><span style="--n:2">200</span>
+                        <span style="--n:3">300</span><span style="--n:4">400</span><span style="--n:5">500</span>
+                        <span style="--n:6">600</span><span style="--n:7">700</span><span style="--n:8">800</span>
+                        <span style="--n:9">900</span><span style="--n:10">1000</span><span style="--n:11">1100</span>
+                        <span style="--n:12">1200</span><span style="--n:13">1300</span><span style="--n:14">1400</span>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+    </main>
+
+    <a class="site-badge" href="index.html">
+        <span class="mark">F</span>
+        Faiz NNCLHNT®
+    </a>
+
+    <script>
+        const clock = document.getElementById('clock');
+        const pad = (n) => String(n).padStart(2, '0');
+        const tick = () => {
+            const now = new Date();
+            clock.textContent = `PETIR, ID — ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+        };
+        tick();
+        setInterval(tick, 1000);
+    </script>
+
+    <script src="effects.js"></script>
 
 </body>
 
